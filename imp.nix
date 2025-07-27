@@ -14,5 +14,8 @@
     ./conf/Nvidia/nvidia.nix
     ./conf/NixHelper/nixhelper.nix
     ./conf/Audio/audio.nix
+    ./conf/configidioma/configidioma.nix
+    ./conf/wireless/wireless.nix
   ];
+
 }
