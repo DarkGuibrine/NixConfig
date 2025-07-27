@@ -1,10 +1,13 @@
 { config, lib, inputs, pkgs, ... }: {
 
-     environment.systemPackages = with pkgs; [
+    ## Permitir pacotes não-livres
+    nixpkgs.config.allowUnfree = true;
+
+    environment.systemPackages = with pkgs; [
     ## Aplicativos sociais
-    vesktop
     zapzap
     inputs.zen-browser.packages.${system}.default
+    (discord.override {withVencord = true;})
 
     ## Jogos
     lutris-free
@@ -31,6 +34,6 @@
     wget
     kdePackages.partitionmanager
     winetricks
-  ];
 
+  ];
 }
