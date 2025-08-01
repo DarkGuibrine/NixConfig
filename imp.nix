@@ -16,6 +16,7 @@
     ./conf/Audio/audio.nix
     ./conf/configidioma/configidioma.nix
     ./conf/wireless/wireless.nix
+    ./conf/Fish/fish.nix
   ];
 
 }

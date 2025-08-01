@@ -15,10 +15,13 @@
   ];
 
 
-
   ## patch jogos
   programs.gamescope.enable = true;
   programs.gamemode.enable = true;
 
-
+  ## lsfg-vk
+  services.lsfg-vk = {
+  enable = true;
+  ui.enable = true;
+};
 }

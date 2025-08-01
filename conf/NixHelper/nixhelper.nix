@@ -4,7 +4,7 @@
   programs.nix-ld.enable = true;
   programs.nix-ld.libraries = with pkgs; [];
 
-  ## nixNG
+  ## nixNH
   programs.nh = {
   enable = true;
   clean.enable = true;

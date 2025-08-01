@@ -10,30 +10,33 @@
     (discord.override {withVencord = true;})
 
     ## Jogos
-    lutris-free
+    lutris
     heroic
-    protonplus
     prismlauncher
     steam
     xclicker
+    mangojuice
+    mangohud
 
     ## Utilitários do sistema e dev tools
     nh
+    vscode
+    cpu-x
+    flatpak
+    vulkan-tools-lunarg
+    vulkan-loader
+    vulkan-utility-libraries
     fastfetch
     git
     btop
-    umu-launcher
-    mangohud
-    goverlay
     ethtool
-    wineWowPackages.staging
-    gamemode
-    gamescope
-    vulkan-tools
     appimage-run
     wget
     kdePackages.partitionmanager
     winetricks
+    wineWowPackages.staging
 
-  ];
+    ## repositorio 25.05
+    inputs.nixpkgs-stable.legacyPackages.${pkgs.system}.vulkan-tools
+    ];
 }

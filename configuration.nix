@@ -9,6 +9,7 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
   boot.loader.systemd-boot.configurationLimit = 10;
+
   boot.kernelPackages = pkgs.linuxPackages_cachyos;  # Kernel customizado
 
   networking.hostName = "Alfa"; # Defina o nome da sua máquina
@@ -22,6 +23,7 @@
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [
       kdePackages.kate
+      kdePackages.kcalc
     ];
   };
 
@@ -29,5 +31,5 @@
   services.displayManager.autoLogin.enable = true;
   services.displayManager.autoLogin.user = "gui";
 
-  system.stateVersion = "25.11";  # versao do nix
+  system.stateVersion = "25.05";  # versao do nix
 }
