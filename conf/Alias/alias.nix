@@ -1,6 +1,6 @@
 { config, lib, inputs, pkgs, ... }: {
 
-    programs.fish.shellAliases = {
+    programs.bash.shellAliases = {
     # upd = "sudo nix flake update --flake /etc/nixos && sudo nixos-rebuild switch --flake path:/etc/nixos#Alfa";
     upd = "nh os switch -a -u";
     nixcf = "kate /etc/nixos/configuration.nix";

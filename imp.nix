@@ -4,7 +4,7 @@
     ./hardware-configuration.nix
     ./conf/Pkgs/pkgs.nix
     ./conf/Alias/alias.nix
-    ./conf/Compressao/compressao.nix
+    ./conf/CfStorage/CfStorage.nix
     ./conf/PatchJogos/patch.nix
     ./conf/Kde/kde.nix
     ./conf/environmentvariables/variables.nix
@@ -16,5 +16,6 @@
     ./conf/configidioma/configidioma.nix
     ./conf/wireless/wireless.nix
     ./conf/Fish/fish.nix
+    ./conf/DistroBox/distrobox.nix
   ];
 }

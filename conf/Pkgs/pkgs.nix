@@ -17,8 +17,10 @@
     xclicker
     mangojuice
     mangohud
-    inputs.nixpkgs-master.legacyPackages.${pkgs.system}.lsfg-vk
-    inputs.nixpkgs-master.legacyPackages.${pkgs.system}.lsfg-vk-ui
+    hydralauncher
+    protonplus
+    lsfg-vk
+    lsfg-vk-ui
 
     ## Utilitários do sistema e dev tools
     nh
@@ -28,6 +30,7 @@
     vulkan-tools-lunarg
     vulkan-loader
     vulkan-utility-libraries
+    preload
     fastfetch
     git
     btop
@@ -38,6 +41,13 @@
     kdePackages.partitionmanager
     winetricks
     wineWowPackages.staging
+    kdePackages.qtmultimedia
+    zenity
+    python3
+    efibootmgr
+    distrobox
+    podman
+    distroshelf
 
     ## repositorio 25.05
     inputs.nixpkgs-stable.legacyPackages.${pkgs.system}.vulkan-tools
