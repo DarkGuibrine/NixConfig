@@ -17,7 +17,6 @@
     xclicker
     mangojuice
     mangohud
-    hydralauncher
     protonplus
     lsfg-vk
     lsfg-vk-ui
@@ -48,6 +47,7 @@
     distrobox
     podman
     distroshelf
+    lact
 
     ## repositorio 25.05
     inputs.nixpkgs-stable.legacyPackages.${pkgs.system}.vulkan-tools

@@ -10,7 +10,7 @@
   boot.loader.efi.canTouchEfiVariables = true;
   boot.loader.systemd-boot.configurationLimit = 10;
 
-  boot.kernelPackages = pkgs.linuxPackages_cachyos-lto;  # Kernel customizado
+  boot.kernelPackages = pkgs.linuxPackages_cachyos;  # Kernel customizado
 
   networking.hostName = "Alfa"; # Defina o nome da sua máquina
 

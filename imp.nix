@@ -17,5 +17,6 @@
     ./conf/wireless/wireless.nix
     ./conf/Fish/fish.nix
     ./conf/DistroBox/distrobox.nix
+    ./conf/Obs/obs.nix
   ];
 }
