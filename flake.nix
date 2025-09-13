@@ -5,6 +5,10 @@
     nixpkgs-stable.url = "github:nixos/nixpkgs/nixos-25.05";
     nixpkgs-master.url = "github:nixos/nixpkgs";
     chaotic.url = "github:chaotic-cx/nyx/nyxpkgs-unstable";
+        home-manager = {
+      url = "github:nix-community/home-manager/";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     nur = {
      url = "github:nix-community/NUR";
      inputs.nixpkgs.follows = "nixpkgs";
@@ -13,8 +17,9 @@
      url = "github:0xc000022070/zen-browser-flake";
      inputs.nixpkgs.follows = "nixpkgs";
     };
+
   };
-  outputs = { self, nixpkgs, nixpkgs-stable,nixpkgs-master ,chaotic, zen-browser, nur, ...} @ inputs: {
+  outputs = { self,nixpkgs,nixpkgs-stable,nixpkgs-master,home-manager,chaotic, zen-browser,nur, ...} @ inputs: {
     nixosConfigurations = {
       "Alfa" = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
@@ -24,8 +29,11 @@
           chaotic.nixosModules.default
           nur.modules.nixos.default
         ];
-      };
     };
-  };
-}
-
+      };
+      homeConfigurations."gui@Alfa" = home-manager.lib.homeManagerConfiguration {
+      pkgs = nixpkgs.legacyPackages.x86_64-linux;
+      modules = [ ./home.nix ];
+    };
+    };
+  }
