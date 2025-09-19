@@ -21,13 +21,20 @@
     preload
     ethtool
     kdePackages.partitionmanager
+    kdePackages.filelight
+    kdePackages.dolphin
+    kdePackages.ark
+    xdg-desktop-portal-gnome
     winetricks
     wineWowPackages.staging
     kdePackages.qtmultimedia
     efibootmgr
     distrobox
+    docker-compose 
     podman
     distroshelf
+    freerdp
+    kdePackages.krfb    
 
     ## repositorio 25.05
     inputs.nixpkgs-stable.legacyPackages.${pkgs.system}.vulkan-tools

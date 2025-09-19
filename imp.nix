@@ -6,7 +6,6 @@
     ./conf/Alias/alias.nix
     ./conf/CfStorage/CfStorage.nix
     ./conf/PatchJogos/patch.nix
-    ./conf/Kde/kde.nix
     ./conf/environmentvariables/variables.nix
     ./conf/Flatpak/flatpak.nix
     ./conf/Flakes/flakeconfig.nix
@@ -18,5 +17,7 @@
     ./conf/Fish/fish.nix
     ./conf/DistroBox/distrobox.nix
     ./conf/Obs/obs.nix
+    #./conf/gnome/gnome.nix #gnome
+    ./conf/Kde/kde.nix #kde
   ];
 }

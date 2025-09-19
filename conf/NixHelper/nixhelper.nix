@@ -13,6 +13,7 @@
   };
 
   ## Configuração do gerenciador nix
-  nix.package = pkgs.lixPackageSets.latest.lix;
+  #nix.package = pkgs.lixPackageSets.latest.lix;
+  nix.package = inputs.nixpkgs-master.legacyPackages.${pkgs.system}.lix;
 
 }
