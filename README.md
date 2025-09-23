@@ -2,7 +2,7 @@
 Minha Configuraçao no NIX des de 22/07/2025
 
 ❄️ | Structure (23/09/25)
-`.
+
 ├── conf
 │   ├── Alias
 │   │   └── alias.nix
