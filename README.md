@@ -5,6 +5,7 @@ Minha Configuraçao no NIX des de 22/07/2025
 ```
 bash
 .
+.
 ├── conf
 │   ├── Alias
 │   │   └── alias.nix
