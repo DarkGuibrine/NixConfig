@@ -22,12 +22,13 @@
     cpu-x
     git
     btop-cuda
-    vscode
+    vscodium
     flatpak
     appimage-run
     wget
     lact
     kitty
+    vlc
 
     ];
 }

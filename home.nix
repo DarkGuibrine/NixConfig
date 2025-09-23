@@ -1,16 +1,29 @@
-{pkgs, config, ...}: {
+{pkgs, config, lib, ...}: {
 
  imports = [
   ./conf/Fontes/fontes.nix
   ./conf/Pkgs/pkgshome.nix
   ./conf/kitty/kitty.nix
+  ./conf/git/git.nix
+  {options.mods = {flakePath = lib.mkOption {type = lib.types.str; default = lib.mkError "Option 'mods.flakePath' must be explicitly set."; description = "The absolute path of this flake. Must be explicitly set.";};};}
 ];
 
-  home.username = "gui";
-  home.homeDirectory = "/home/gui";
+  mods = {
+  kitty.enable = true;
+  flakePath = "/etc/nixos";
+  };
 
-  programs.home-manager.enable = true;
-  programs.fish.enable = true;
+  home = {
+    username = "gui";
+    homeDirectory = "/home/gui";
+    stateVersion = "25.11";
+  };
+
+  programs = {
+    home-manager.enable = true;
+    fish.enable = true;
+  };
+
   nixpkgs.config.allowUnfree = true;
 
   ## config gnome
@@ -18,9 +31,4 @@
   #  enable = true;
   #  settings."org/gnome/desktop/interface".color-scheme = "prefer-dark";
   #};
-
-
-  # The state version is required and should stay at the version you
-  # originally installed.
-  home.stateVersion = "25.11";
 }

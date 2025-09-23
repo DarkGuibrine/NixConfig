@@ -35,6 +35,9 @@
     distroshelf
     freerdp
     kdePackages.krfb    
+    dmidecode
+    inputs.winboat.packages.x86_64-linux.default
+    gitFull
 
     ## repositorio 25.05
     inputs.nixpkgs-stable.legacyPackages.${pkgs.system}.vulkan-tools

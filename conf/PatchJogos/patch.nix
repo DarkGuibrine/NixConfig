@@ -14,8 +14,9 @@
     "steam-run"
   ];
 
-
   ## patch jogos
-  programs.gamescope.enable = true;
-  programs.gamemode.enable = true;
+  programs = {
+    gamescope.enable = true;
+    gamemode.enable = true;
+  };
 }

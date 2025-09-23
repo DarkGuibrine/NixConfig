@@ -1,10 +1,10 @@
 { config, lib, inputs, pkgs, ... }: {
 
-  ## Configuração do driver NVIDIA
-  hardware.graphics.enable = true;
   services.xserver.videoDrivers = [ "nvidia" ];
-  hardware.nvidia.open = false;
-  #hardware.nvidia.package = config.boot.kernelPackages.nvidiaPackages.beta;
-  hardware.nvidia.package = config.boot.kernelPackages.nvidiaPackages.production;
-
+  hardware = {
+    graphics.enable = true;
+    nvidia.open = false;
+    nvidia.package = config.boot.kernelPackages.nvidiaPackages.production;
+    #nvidia.package = config.boot.kernelPackages.nvidiaPackages.beta;
+  };
 }
