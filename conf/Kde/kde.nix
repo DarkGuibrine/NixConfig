@@ -7,4 +7,14 @@
   };
   programs.kdeconnect.enable = true;
 
+   environment.systemPackages = with pkgs; [
+    kdePackages.partitionmanager
+    kdePackages.filelight
+    kdePackages.dolphin
+    kdePackages.ark
+    kdePackages.qtmultimedia
+    kdePackages.kate
+    kdePackages.kcalc
+   ];
+
 }

@@ -29,6 +29,7 @@
     lact
     kitty
     vlc
+    tree
 
     ];
 }

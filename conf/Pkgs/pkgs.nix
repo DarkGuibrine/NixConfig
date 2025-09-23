@@ -20,21 +20,12 @@
     gcc
     preload
     ethtool
-    kdePackages.partitionmanager
-    kdePackages.filelight
-    kdePackages.dolphin
-    kdePackages.ark
-    xdg-desktop-portal-gnome
     winetricks
     wineWowPackages.staging
-    kdePackages.qtmultimedia
     efibootmgr
-    distrobox
     docker-compose 
     podman
-    distroshelf
-    freerdp
-    kdePackages.krfb    
+    freerdp    
     dmidecode
     inputs.winboat.packages.x86_64-linux.default
     gitFull

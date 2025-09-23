@@ -30,10 +30,7 @@
     isNormalUser = true;
     description = "Gui";
     extraGroups = [ "networkmanager" "wheel"];
-    packages = with pkgs; [
-      kdePackages.kate
-      kdePackages.kcalc
-    ];
+    packages = with pkgs; [ ];
   };
 
   system.stateVersion = "25.05";  # versao do nix
