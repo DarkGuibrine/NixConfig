@@ -33,5 +33,5 @@
     packages = with pkgs; [ ];
   };
 
-  system.stateVersion = "25.05";  # versao do nix
+  system.stateVersion = "25.05";  # versao do ni
 }
