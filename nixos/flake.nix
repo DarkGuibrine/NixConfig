@@ -20,7 +20,7 @@
      inputs.nixpkgs.follows = "nixpkgs";
     };
   };
-  outputs = { self,nixpkgs,nixpkgs-stable,nixpkgs-master,home-manager,chaotic, zen-browser,nur, aagl, winboat, ...} @ inputs: {
+  outputs = { self,nixpkgs,nixpkgs-stable,nixpkgs-master,home-manager,chaotic, zen-browser,nur, aagl,winboat, ...} @ inputs: {
     nixosConfigurations = {
       "Alfa" = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";

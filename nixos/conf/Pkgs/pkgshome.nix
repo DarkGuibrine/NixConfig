@@ -3,8 +3,10 @@
     home.packages = with pkgs; [
     
     ## aplicativos sociais
-    (discord.override {withVencord = true;})
     telegram-desktop
+    (discord.override {withVencord = true;})
+    youtube-music
+
 
     ## Jogos
     lutris
@@ -16,6 +18,7 @@
     mangojuice
     mangohud
     protonplus
+    hydralauncher
 
     ## Utilitários do sistema e dev tools
     fastfetch
@@ -30,6 +33,12 @@
     kitty
     vlc
     tree
+    alacarte
+    python3
+    unrar
+    droidcam
+    gpart
 
     ];
+    
 }

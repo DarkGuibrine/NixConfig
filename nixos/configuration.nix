@@ -14,7 +14,7 @@
   };
 
   boot.kernelPackages = pkgs.linuxPackages_cachyos;  # Kernel customizado
-  #boot.kernelPackages = pkgs.linuxPackagesFor pkgs.linux_cachyos-gcc;
+  #boot.kernelPackages = pkgs.linuxPackagesFor pkgs.linux_cachyos;
   #boot.kernelPackages = pkgs.linuxPackages_latest;
 
   networking.hostName = "Alfa"; # Defina o nome da sua máquina
