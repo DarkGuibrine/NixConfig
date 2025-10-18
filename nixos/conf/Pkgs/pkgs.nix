@@ -36,6 +36,6 @@
     inputs.nixpkgs-stable.legacyPackages.${pkgs.system}.vulkan-tools
 
     ## repositorio chaotic
-    #inputs.chaotic.packages.${pkgs.system}.proton-cachyos_x86_64_v3
+    #inputs.chaotic.packages.${pkgs.system}.proton-cachyos
     ];
 }
