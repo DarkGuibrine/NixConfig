@@ -6,7 +6,7 @@
     environment.systemPackages = with pkgs; [
     ## Aplicativos sociais
     inputs.zen-browser.packages.${system}.default
-    
+
     ## jogos
     lsfg-vk
     lsfg-vk-ui

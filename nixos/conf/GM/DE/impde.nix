@@ -1,7 +1,8 @@
 { config, lib, inputs, pkgs, ... }: {
 
    imports = [
-    ./hardware-configuration.nix
-    ./conf/GM/imp.nix
+    ./cosmic.nix
+    #./gnome.nix
+    #./kde.nix
   ];
 }

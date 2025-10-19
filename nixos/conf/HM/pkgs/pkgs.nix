@@ -4,9 +4,8 @@
     
     ## aplicativos sociais
     telegram-desktop
-    (discord.override {withVencord = true;})
     youtube-music
-
+    (discord.override {withEquicord = true;})
 
     ## Jogos
     lutris
@@ -33,7 +32,6 @@
     kitty
     vlc
     tree
-    alacarte
     python3
     unrar
     droidcam

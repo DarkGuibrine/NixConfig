@@ -7,11 +7,11 @@
   };
   
   environment.systemPackages = with pkgs; [
-
   ];
-  #programs.kdeconnect = {
-  #enable = true;
-  #package = pkgs.valent;
-#};
+  programs.kdeconnect = {
+  enable = true;
+  package = pkgs.valent;
+};
+
 }
   

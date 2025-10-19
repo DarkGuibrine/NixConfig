@@ -7,9 +7,10 @@
   config = lib.mkIf config.mods.kitty.enable {
     programs.kitty = {
       enable = true;
-      extraConfig = "include ${config.mods.flakePath}/conf/kitty/kitty.conf";
+      extraConfig = "include ${config.mods.flakePath}/conf/HM/kitty/kitty.conf";
       settings.clear_all_shortcuts = "yes";
     };
   };
+   
 }
 

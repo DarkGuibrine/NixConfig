@@ -1,17 +1,9 @@
 {pkgs, config, lib, ...}: {
 
  imports = [
-  ./conf/Fontes/fontes.nix
-  ./conf/Pkgs/pkgshome.nix
-  ./conf/kitty/kitty.nix
-  ./conf/git/git.nix
+  ./conf/HM/imp.nix
   {options.mods = {flakePath = lib.mkOption {type = lib.types.str; default = lib.mkError "Option 'mods.flakePath' must be explicitly set."; description = "The absolute path of this flake. Must be explicitly set.";};};}
 ];
-
-  mods = {
-  kitty.enable = true;
-  flakePath = "/etc/nixos";
-  };
 
   home = {
     username = "gui";
@@ -25,6 +17,11 @@
   };
 
   nixpkgs.config.allowUnfree = true;
+
+     mods = {
+  kitty.enable = true;
+  flakePath = "/etc/nixos";
+  };
 
   ## config gnome
   #dconf = {

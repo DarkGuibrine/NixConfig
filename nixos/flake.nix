@@ -8,9 +8,9 @@
     aagl.url = "github:ezKEa/aagl-gtk-on-nix";
     winboat.url = "github:TibixDev/winboat";
     nix-flatpak.url = "github:gmodena/nix-flatpak"; # unstable branch. Use github:gmodena/nix-flatpak/?ref=<tag> to pin releases.
-        home-manager = {
-      url = "github:nix-community/home-manager/";
-      inputs.nixpkgs.follows = "nixpkgs";
+    home-manager = {
+     url = "github:nix-community/home-manager/";
+     inputs.nixpkgs.follows = "nixpkgs";
     };
     nur = {
      url = "github:nix-community/NUR";
@@ -40,8 +40,8 @@
     };
       };
       homeConfigurations."gui@Alfa" = home-manager.lib.homeManagerConfiguration {
-      pkgs = nixpkgs.legacyPackages.x86_64-linux;
-      modules = [ ./home.nix ];
-     };
+       pkgs = nixpkgs.legacyPackages.x86_64-linux;
+       modules = [ ./home.nix ];
+      };
     };
   }
