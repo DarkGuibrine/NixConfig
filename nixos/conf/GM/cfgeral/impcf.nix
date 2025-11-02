@@ -2,7 +2,6 @@
 
    imports = [
     ./alias.nix
-    ./fish.nix
     ./audio.nix
     ./idioma.nix
     ./nixhelper.nix
@@ -12,5 +11,6 @@
     ./variables.nix
     ./wireless.nix
     ./zstd.nix
+    ./fish.nix
   ];
 }

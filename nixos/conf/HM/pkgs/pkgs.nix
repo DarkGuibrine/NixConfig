@@ -18,9 +18,12 @@
     mangohud
     protonplus
     hydralauncher
+    lsfg-vk
+    lsfg-vk-ui
 
     ## Utilitários do sistema e dev tools
     fastfetch
+    qbittorrent
     cpu-x
     git
     btop-cuda
@@ -28,15 +31,14 @@
     flatpak
     appimage-run
     wget
-    lact
     kitty
     vlc
     tree
     python3
     unrar
     droidcam
-    gpart
-
+    winetricks
+    wineWowPackages.staging
     ];
     
 }

@@ -4,6 +4,8 @@
     ./Fontes/fontes.nix
     ./git/git.nix
     ./kitty/kitty.nix
-    ./pkgs/pkgs.nix
+    ./pkgs/imp_pkgs.nix
+    ./shell/fish.nix
+    ./shell/starship.nix
   ];
 }

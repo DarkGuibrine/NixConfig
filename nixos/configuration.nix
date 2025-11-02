@@ -32,6 +32,16 @@
     extraGroups = [ "networkmanager" "wheel"];
     packages = with pkgs; [ ];
   };
-
+  
+  ## sudo-rs
+  security = {
+    sudo.enable = false;
+    sudo-rs = {
+      enable = true;
+      execWheelOnly = true;
+      wheelNeedsPassword = true;
+    };
+  };
+  
   system.stateVersion = "25.05";  # versao do nix
 }
