@@ -6,7 +6,10 @@
     environment.systemPackages = with pkgs; [
     ## Aplicativos sociais
     inputs.zen-browser.packages.${system}.default
-    
+    inputs.hayase.packages.${pkgs.system}.default 
+    bitwarden-desktop
+    protonvpn-gui
+
     ## Utilitários do sistema e dev tools
     nh
     home-manager
@@ -19,6 +22,8 @@
     efibootmgr
     docker-compose 
     podman
+    distroshelf
+    distrobox
     freerdp   
     dmidecode
     winboat
@@ -28,4 +33,7 @@
     ## inputs stable
     #inputs.nixpkgs-stable.legacyPackages.${pkgs.stdenv.hostPlatform.system}
     ];
+
+    programs.gpu-screen-recorder.enable = true;
+    
 }

@@ -7,13 +7,17 @@
     ];
     
   ## Configuração do bootloader
-  boot.loader = {
-    systemd-boot.enable = true;
-    efi.canTouchEfiVariables = true;
-    systemd-boot.configurationLimit = 10;
+  boot = {
+    kernelPackages = pkgs.linuxPackages_cachyos; # Kernel Cachy
+    loader.systemd-boot.enable = true;
+    loader.efi.canTouchEfiVariables = true;
+    loader.systemd-boot.configurationLimit = 10;
+    kernel.sysctl = {
+      "kernel.split_lock_mitigate" = 0;
+      "kernel.nmi_watchdog" = 0;
+    };
   };
 
-  boot.kernelPackages = pkgs.linuxPackages_cachyos;  # Kernel customizado
   #boot.kernelPackages = pkgs.linuxPackagesFor pkgs.linux_cachyos;
   #boot.kernelPackages = pkgs.linuxPackages_latest;
 
@@ -23,6 +27,7 @@
     xserver.enable = false; # Ativar sistema gráfico X11
     displayManager.autoLogin.enable = true;
     displayManager.autoLogin.user = "gui";
+    printing.enable = false;
   };
 
   ## Definição do usuário normal

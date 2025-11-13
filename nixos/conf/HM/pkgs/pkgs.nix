@@ -23,13 +23,13 @@
 
     ## Utilitários do sistema e dev tools
     fastfetch
+    myxer
     qbittorrent
     cpu-x
     git
     btop-cuda
     vscodium
     flatpak
-    appimage-run
     wget
     kitty
     vlc
@@ -40,5 +40,5 @@
     winetricks
     wineWowPackages.staging
     ];
-    
+
 }
