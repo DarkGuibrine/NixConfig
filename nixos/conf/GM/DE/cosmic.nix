@@ -9,10 +9,10 @@
   environment.systemPackages = with pkgs; [
     gnome-disk-utility
   ];
-  programs.kdeconnect = {
-  enable = true;
-  package = pkgs.valent;
-};
+  #programs.kdeconnect = {
+  #enable = true;
+  #package = pkgs.valent;
+#};
 
 }
   

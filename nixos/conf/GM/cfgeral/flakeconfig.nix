@@ -8,4 +8,6 @@
     registry = lib.mapAttrs (_: value: {flake = value;}) (lib.filterAttrs (_: value: lib.isType "flake" value) inputs);
     settings.flake-registry = "";
   };
+  chaotic.nyx.cache.enable = true;
+  
 }

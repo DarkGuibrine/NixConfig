@@ -8,7 +8,6 @@
     inputs.zen-browser.packages.${system}.default
     inputs.hayase.packages.${pkgs.system}.default 
     bitwarden-desktop
-    protonvpn-gui
 
     ## Utilitários do sistema e dev tools
     nh
