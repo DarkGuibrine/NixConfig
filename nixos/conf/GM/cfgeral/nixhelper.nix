@@ -24,5 +24,19 @@
   nix.package = pkgs.lixPackageSets.latest.lix;
   #nix.package = inputs.nixpkgs-master.legacyPackages.${pkgs.system}.lix;
 
-}
+  ## compilaçao
 
+   nix = {
+    settings = {
+      cores = 0;
+      max-jobs = "auto";
+      auto-optimise-store = true;
+    };
+ };
+   programs = { 
+    ccache.enable = true;
+    ccache.cacheDir = "/var/cache/ccache";
+  };
+  nix.settings.extra-sandbox-paths = [ "/var/cache/ccache" ];
+
+}

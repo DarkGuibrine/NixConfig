@@ -12,5 +12,6 @@
     ./wireless.nix
     ./zstd.nix
     ./fish.nix
+    ./kernel.nix
   ];
 }

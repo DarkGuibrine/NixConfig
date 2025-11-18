@@ -1,8 +1,8 @@
 { config, lib, inputs, pkgs, ... }: {
 
    imports = [
-    ./cosmic.nix
+    #./cosmic.nix
     #./gnome.nix
-    #./kde.nix
+    ./kde.nix
   ];
 }

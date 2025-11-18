@@ -3,7 +3,6 @@
   services.flatpak = {
     enable = true;
     packages = [
-      "com.dec05eba.gpu_screen_recorder"
       "org.vinegarhq.Sober"
     ];
     update.auto = {

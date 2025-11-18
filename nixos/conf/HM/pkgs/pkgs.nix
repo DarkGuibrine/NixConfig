@@ -5,10 +5,13 @@
     ## aplicativos sociais
     telegram-desktop
     youtube-music
+    element-desktop
     (discord.override {withEquicord = true;})
+    #inputs.chaotic.legacyPackages.${pkgs.stdenv.hostPlatform.system}.proton-cachyos_x86_64_v3
 
     ## Jogos
     lutris
+    faugus-launcher
     heroic
     prismlauncher
     steam

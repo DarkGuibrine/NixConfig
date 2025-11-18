@@ -8,7 +8,6 @@
     
   ## Configuração do bootloader
   boot = {
-    kernelPackages = pkgs.linuxPackages_cachyos; # Kernel Cachy
     loader.systemd-boot.enable = true;
     loader.efi.canTouchEfiVariables = true;
     loader.systemd-boot.configurationLimit = 10;
