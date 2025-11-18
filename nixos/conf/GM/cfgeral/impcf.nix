@@ -13,5 +13,6 @@
     ./zstd.nix
     ./fish.nix
     ./kernel.nix
+    ./udev.nix
   ];
 }

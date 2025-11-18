@@ -40,8 +40,6 @@
     python3
     unrar
     droidcam
-    winetricks
-    wineWowPackages.staging
     ];
 
 }

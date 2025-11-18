@@ -29,7 +29,11 @@
     #winboat
     gitFull
     kdePackages.partitionmanager
-    
+    usbutils
+    openrgb
+    winetricks
+    wineWowPackages.staging
+
     ## inputs stable
     #inputs.nixpkgs-stable.legacyPackages.${pkgs.stdenv.hostPlatform.system}
     ];
