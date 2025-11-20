@@ -5,8 +5,8 @@
 
     environment.systemPackages = with pkgs; [
     ## Aplicativos sociais
-    inputs.zen-browser.packages.${system}.default
-    inputs.hayase.packages.${pkgs.system}.default 
+    inputs.zen-browser.packages.${stdenv.hostPlatform.system}.default
+    inputs.hayase.packages.${pkgs.stdenv.hostPlatform.system}.default 
     bitwarden-desktop
     inputs.chaotic.legacyPackages.${pkgs.stdenv.hostPlatform.system}.proton-cachyos_x86_64_v3
 

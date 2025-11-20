@@ -2,7 +2,7 @@
 
  programs.git.settings = {
     enable = true;
-    user.email = "guihermando13@gmail.com";
+    user.email = "darkgui@protonmail.com";
     user.name = "DarkGui";
    credential.helper = "store";
   };

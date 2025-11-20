@@ -40,6 +40,8 @@
     python3
     unrar
     droidcam
+     
+
     ];
 
 }

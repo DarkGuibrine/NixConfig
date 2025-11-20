@@ -5,9 +5,6 @@
     upd = "nh home switch -a -u && nh os switch -a -u";
     updhome = "nh home switch -a -u";
     updsystem = "nh os switch -a -u";
-    nixcf = "kate /etc/nixos/configuration.nix";
-    nixfk = "kate /etc/nixos/flake.nix";
-    nixpkg = "kate /etc/nixos/conf/Pkgs/pkgs.nix";
-    nixalias = "kate /etc/nixos/conf/Alias/alias.nix";
+    gitupdate = "git add . && git commit && git push origin main"
     };
 }
