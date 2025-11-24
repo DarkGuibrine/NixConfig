@@ -19,27 +19,21 @@
 
   services = {
   
-  ananicy = {
-  enable = true;
-  package = pkgs.ananicy-cpp;
-  rulesProvider = pkgs.ananicy-rules-cachyos;
-  }; 
-
   preload.enable = true;
-
-    earlyoom = {
-      enable = true;
-      freeSwapThreshold = 2;
-      freeMemThreshold = 2;
-      extraArgs = [
-          "-g" "--avoid" "'^(X|plasma.*|konsole|kwin|wayland|gnome.*)$'"
+  
+  earlyoom = {
+    enable = true;
+    freeSwapThreshold = 2;
+    freeMemThreshold = 2;
+    extraArgs = [
+      "-g" "--avoid" "'^(X|plasma.*|konsole|kwin|wayland|gnome.*)$'"
       ];
     };
 
   udev = {
-	     enable = true;
-	     extraRules = ''
-         # Enable runtime PM for NVIDIA VGA/3D controller devices on driver bind
+	  enable = true;
+	  extraRules = ''
+     # Enable runtime PM for NVIDIA VGA/3D controller devices on driver bind
      ACTION=="add|bind", SUBSYSTEM=="pci", DRIVERS=="nvidia", \
      ATTR{vendor}=="0x10de", ATTR{class}=="0x03[0-9]*", \
      TEST=="power/control", ATTR{power/control}="auto"
