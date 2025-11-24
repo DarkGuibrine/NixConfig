@@ -14,5 +14,6 @@
     ./fish.nix
     ./kernel.nix
     ./udev.nix
+    ./patchgames.nix
   ];
 }

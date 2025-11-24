@@ -6,7 +6,7 @@
     nixpkgs-master.url = "github:nixos/nixpkgs";
     chaotic.url = "github:chaotic-cx/nyx/nyxpkgs-unstable";
     aagl.url = "github:ezKEa/aagl-gtk-on-nix";
-    nix-flatpak.url = "github:gmodena/nix-flatpak";
+    nix-flatpak.url = "github:gmodena/nix-flatpak";  
     home-manager = {
      url = "github:nix-community/home-manager/";
      inputs.nixpkgs.follows = "nixpkgs";
@@ -44,7 +44,8 @@
       };
       homeConfigurations."gui@Alfa" = home-manager.lib.homeManagerConfiguration {
        pkgs = nixpkgs.legacyPackages.x86_64-linux;
-       modules = [ ./home.nix 
+       modules = [ 
+        ./home.nix
        ];
       };
     };

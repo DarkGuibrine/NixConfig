@@ -11,10 +11,6 @@
     loader.systemd-boot.enable = true;
     loader.efi.canTouchEfiVariables = true;
     loader.systemd-boot.configurationLimit = 10;
-    kernel.sysctl = {
-      "kernel.split_lock_mitigate" = 0;
-      "kernel.nmi_watchdog" = 0;
-    };
   };
 
   #boot.kernelPackages = pkgs.linuxPackagesFor pkgs.linux_cachyos;

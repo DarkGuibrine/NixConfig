@@ -8,7 +8,6 @@
     inputs.zen-browser.packages.${stdenv.hostPlatform.system}.default
     inputs.hayase.packages.${pkgs.stdenv.hostPlatform.system}.default 
     bitwarden-desktop
-    inputs.chaotic.legacyPackages.${pkgs.stdenv.hostPlatform.system}.proton-cachyos_x86_64_v3
 
     ## Utilitários do sistema e dev tools
     nh

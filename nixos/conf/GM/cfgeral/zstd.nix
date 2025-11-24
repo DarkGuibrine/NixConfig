@@ -14,6 +14,4 @@
   algorithm = "zstd";
   };
 
-  ## preload
-  services.preload.enable = true;
 }
