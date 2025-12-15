@@ -16,11 +16,8 @@
     };
   };
 
-
   services = {
-  
-  preload.enable = true;
-  
+
   earlyoom = {
     enable = true;
     freeSwapThreshold = 2;
@@ -44,6 +41,43 @@
      TEST=="power/control", ATTR{power/control}="on"
 	     '';
      };
+
+    preload-ng = {
+      enable = true;
+      settings = {
+        cycle = 15;
+        memTotal = -5;
+        memFree = 70;
+        memCached = 10;
+        memBuffers = 50; 
+        minSize = 1000000; 
+        processes = 60;
+        sortStrategy = 0;
+        autoSave = 1800;
+        mapPrefix = "/nix/store/;/run/current-system/;!/";
+        exePrefix = "/nix/store/;/run/current-system/;!/";
+      };
+    };
   };
+    
+  systemd.services.set-min-free-mem = {
+   description = "Set vm.min_free_kbytes dynamically";
+   wantedBy = [ "multi-user.target" ];
+   after = [ "local-fs.target" ];
+   serviceConfig = {
+     User = "root";
+     RemainAfterExit = true;
+   };
+   script = ''
+     TOTAL_MEM=$(${pkgs.gawk}/bin/awk '/MemTotal/ {printf "%.0f", $2 * 0.01}' /proc/meminfo)
+     if [ -z "$TOTAL_MEM" ] || [ "$TOTAL_MEM" -eq 0 ]; then
+       echo "Failed to calculate memory size" >&2
+       exit 1
+     fi
+     ${pkgs.sysctl}/bin/sysctl -w vm.min_free_kbytes=$TOTAL_MEM
+   '';
+  };
+
+
 
 }

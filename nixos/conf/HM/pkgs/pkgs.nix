@@ -7,7 +7,6 @@
     youtube-music
     element-desktop
     (discord.override {withEquicord = true;})
-    #inputs.chaotic.legacyPackages.${pkgs.stdenv.hostPlatform.system}.proton-cachyos_x86_64_v3
 
     ## Jogos
     lutris
@@ -26,6 +25,7 @@
 
     ## Utilitários do sistema e dev tools
     fastfetch
+    handbrake
     myxer
     qbittorrent
     cpu-x
@@ -39,7 +39,8 @@
     tree
     python3
     unrar
-    droidcam
+    #droidcam
+    motrix
     ];
 
 

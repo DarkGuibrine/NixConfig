@@ -5,9 +5,12 @@
 
     environment.systemPackages = with pkgs; [
     ## Aplicativos sociais
+    bitwarden-desktop
+
+    ## inputs
     inputs.zen-browser.packages.${stdenv.hostPlatform.system}.default
     inputs.hayase.packages.${pkgs.stdenv.hostPlatform.system}.default 
-    bitwarden-desktop
+    #inputs.chaotic.packages.${pkgs.stdenv.hostPlatform.system}.proton-cachyos_x86_64_v3
 
     ## Utilitários do sistema e dev tools
     nh
@@ -16,7 +19,6 @@
     vulkan-loader
     vulkan-utility-libraries
     gcc
-    preload
     ethtool
     efibootmgr
     docker-compose 
@@ -25,6 +27,7 @@
     distrobox
     freerdp   
     dmidecode
+    i2c-tools
     #winboat
     gitFull
     kdePackages.partitionmanager
@@ -32,11 +35,16 @@
     openrgb
     winetricks
     wineWowPackages.staging
+    haguichi
+    logmein-hamachi
+    zerotierone
 
     ## inputs stable
     #inputs.nixpkgs-stable.legacyPackages.${pkgs.stdenv.hostPlatform.system}
     ];
 
     programs.gpu-screen-recorder.enable = true;
+    services.logmein-hamachi.enable = true;
+    programs.haguichi.enable = true;
     
 }

@@ -6,6 +6,7 @@
     desktopManager.cosmic.xwayland.enable = true;
   };
   
+  environment.sessionVariables.COSMIC_DATA_CONTROL_ENABLED = 1;
   environment.systemPackages = with pkgs; [
     gnome-disk-utility
   ];

@@ -14,6 +14,6 @@
       obs-gstreamer
       obs-vkcapture
     ];
-    enableVirtualCamera = true;
+   #enableVirtualCamera = true;
   };
 }
