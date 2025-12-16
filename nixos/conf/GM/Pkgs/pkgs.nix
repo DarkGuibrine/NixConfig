@@ -38,7 +38,8 @@
     haguichi
     logmein-hamachi
     zerotierone
-
+    kdePackages.ark
+    
     ## inputs stable
     #inputs.nixpkgs-stable.legacyPackages.${pkgs.stdenv.hostPlatform.system}
     ];

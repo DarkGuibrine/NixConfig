@@ -25,6 +25,7 @@
 
     ## Utilitários do sistema e dev tools
     fastfetch
+    flameshot
     handbrake
     myxer
     qbittorrent

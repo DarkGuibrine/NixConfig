@@ -6,5 +6,6 @@
     ./steam.nix
     ./lact.nix
     ./obs.nix
+    ./thunar.nix
   ];
 }
