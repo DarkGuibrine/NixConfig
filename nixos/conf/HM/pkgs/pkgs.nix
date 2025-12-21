@@ -42,6 +42,7 @@
     unrar
     #droidcam
     motrix
+    mission-center
     ];
 
 

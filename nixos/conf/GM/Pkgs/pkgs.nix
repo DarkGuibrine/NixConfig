@@ -38,7 +38,12 @@
     haguichi
     logmein-hamachi
     zerotierone
-    kdePackages.ark
+    file-roller
+    loupe
+    lazygit
+    rustup
+    gnumake
+    onlyoffice-desktopeditors
     
     ## inputs stable
     #inputs.nixpkgs-stable.legacyPackages.${pkgs.stdenv.hostPlatform.system}

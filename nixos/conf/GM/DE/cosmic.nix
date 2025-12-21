@@ -12,10 +12,12 @@
   ];
    environment.cosmic.excludePackages = with pkgs; [ 
     cosmic-files
+    cosmic-term
+    cosmic-player
+    cosmic-screenshot
    ];
   programs.kdeconnect = {
     enable = true;
-    package = pkgs.valent;
   };
   services.desktopManager.cosmic.showExcludedPkgsWarning = false;
 
