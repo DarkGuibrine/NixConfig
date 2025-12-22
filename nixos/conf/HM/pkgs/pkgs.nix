@@ -43,6 +43,7 @@
     #droidcam
     motrix
     mission-center
+    lxappearance
     ];
 
 

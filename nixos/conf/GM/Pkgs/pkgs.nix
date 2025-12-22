@@ -41,9 +41,10 @@
     file-roller
     loupe
     lazygit
-    rustup
     gnumake
     onlyoffice-desktopeditors
+    adwaita-qt
+    adwaita-qt6
     
     ## inputs stable
     #inputs.nixpkgs-stable.legacyPackages.${pkgs.stdenv.hostPlatform.system}

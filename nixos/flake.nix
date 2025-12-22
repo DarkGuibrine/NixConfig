@@ -8,7 +8,6 @@
     nix-flatpak.url = "github:gmodena/nix-flatpak"; 
     preload-ng.url = "github:miguel-b-p/preload-ng"; 
     chaotic.url = "github:lonerOrz/nyx-loner";
-    determinate.url = "https://flakehub.com/f/DeterminateSystems/determinate/*";
     home-manager = {
      url = "github:nix-community/home-manager/";
      inputs.nixpkgs.follows = "nixpkgs";
@@ -26,7 +25,7 @@
      inputs.nixpkgs.follows = "nixpkgs";
     };
   };
-  outputs = {self ,nixpkgs ,nixpkgs-stable ,nixpkgs-master ,home-manager ,zen-browser ,nur ,aagl ,hayase ,nix-flatpak ,preload-ng ,chaotic ,determinate , ...} @ inputs: {
+  outputs = {self ,nixpkgs ,nixpkgs-stable ,nixpkgs-master ,home-manager ,zen-browser ,nur ,aagl ,hayase ,nix-flatpak ,preload-ng ,chaotic , ...} @ inputs: {
     nixosConfigurations = {
       "Alfa" = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
@@ -37,7 +36,6 @@
           nix-flatpak.nixosModules.nix-flatpak
           preload-ng.nixosModules.default 
           chaotic.nixosModules.default
-          determinate.nixosModules.default
 	        {services.preload-ng.enable = true;}
           {imports = [ aagl.nixosModules.default ];
           nix.settings = aagl.nixConfig; # Set up Cachix
