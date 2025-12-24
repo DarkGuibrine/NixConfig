@@ -37,11 +37,11 @@
           preload-ng.nixosModules.default 
           chaotic.nixosModules.default
 	        {services.preload-ng.enable = true;}
-          {imports = [ aagl.nixosModules.default ];
-          nix.settings = aagl.nixConfig; # Set up Cachix
-          programs.anime-game-launcher.enable = true;
-          programs.sleepy-launcher.enable = true;
-          }
+          #{imports = [ aagl.nixosModules.default ];
+          #nix.settings = aagl.nixConfig; # Set up Cachix
+          #programs.anime-game-launcher.enable = true;
+          #programs.sleepy-launcher.enable = true;
+          #}
         ];
     };
       };
