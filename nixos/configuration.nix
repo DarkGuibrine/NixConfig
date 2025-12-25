@@ -8,8 +8,6 @@
     
   ## Configuração do bootloader
   boot = {
-    #kernelPackages = pkgs.linuxPackages_latest;
-    kernelPackages = pkgs.linuxPackages_cachyos;
     loader.systemd-boot.enable = true;
     loader.efi.canTouchEfiVariables = true;
     loader.systemd-boot.configurationLimit = 10;
@@ -42,5 +40,7 @@
     };
   };
   
+
+
   system.stateVersion = "25.05";  # versao do nix
 }

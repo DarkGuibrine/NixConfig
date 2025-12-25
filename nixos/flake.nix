@@ -7,7 +7,7 @@
     aagl.url = "github:ezKEa/aagl-gtk-on-nix";
     nix-flatpak.url = "github:gmodena/nix-flatpak"; 
     preload-ng.url = "github:miguel-b-p/preload-ng"; 
-    chaotic.url = "github:lonerOrz/nyx-loner";
+    nix-cachyos-kernel.url = "github:xddxdd/nix-cachyos-kernel/release";
     home-manager = {
      url = "github:nix-community/home-manager/";
      inputs.nixpkgs.follows = "nixpkgs";
@@ -25,7 +25,7 @@
      inputs.nixpkgs.follows = "nixpkgs";
     };
   };
-  outputs = {self ,nixpkgs ,nixpkgs-stable ,nixpkgs-master ,home-manager ,zen-browser ,nur ,aagl ,hayase ,nix-flatpak ,preload-ng ,chaotic , ...} @ inputs: {
+  outputs = {self ,nixpkgs ,nixpkgs-stable ,nixpkgs-master ,home-manager ,zen-browser ,nur ,aagl ,hayase ,nix-flatpak ,preload-ng ,nix-cachyos-kernel , ...} @ inputs: {
     nixosConfigurations = {
       "Alfa" = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
@@ -35,7 +35,6 @@
           nur.modules.nixos.default
           nix-flatpak.nixosModules.nix-flatpak
           preload-ng.nixosModules.default 
-          chaotic.nixosModules.default
 	        {services.preload-ng.enable = true;}
           #{imports = [ aagl.nixosModules.default ];
           #nix.settings = aagl.nixConfig; # Set up Cachix
