@@ -17,6 +17,11 @@
     gnomeExtensions.arc-menu
     gnomeExtensions.appindicator
     gnomeExtensions.valent
+    gnomeExtensions.forge
+    gnomeExtensions.clipboard-indicator
+    gnomeExtensions.media-controls
+    gnomeExtensions.sound-output-device-chooser
+    gnomeExtensions.quick-settings-audio-panel
     xdg-desktop-portal-gnome
     valent
     gnome-tweaks
@@ -24,7 +29,7 @@
     gnome-extension-manager
     refine
     alacarte
-    nautilus
+    dconf
   ];
   environment.gnome.excludePackages = with pkgs; [ gnome-tour gnome-user-docs ];
 

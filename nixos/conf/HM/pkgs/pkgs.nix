@@ -4,7 +4,7 @@
     
     ## aplicativos sociais
     telegram-desktop
-    youtube-music
+    pear-desktop
     element-desktop
     (discord.override {withEquicord = true;})
 
@@ -16,7 +16,8 @@
     steam
     ryubing
     xclicker
-    mangojuice
+    #mangojuice
+    goverlay
     mangohud
     protonplus
     hydralauncher
@@ -27,7 +28,7 @@
     fastfetch
     flameshot
     handbrake
-    myxer
+    easyeffects
     qbittorrent
     cpu-x
     git

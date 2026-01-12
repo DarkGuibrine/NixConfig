@@ -10,7 +10,6 @@
     ## inputs
     inputs.zen-browser.packages.${stdenv.hostPlatform.system}.default
     inputs.hayase.packages.${pkgs.stdenv.hostPlatform.system}.default 
-    #inputs.chaotic.packages.${pkgs.stdenv.hostPlatform.system}.proton-cachyos_x86_64_v3
 
     ## Utilitários do sistema e dev tools
     nh
@@ -28,7 +27,6 @@
     freerdp   
     dmidecode
     i2c-tools
-    #winboat
     gitFull
     kdePackages.partitionmanager
     usbutils
@@ -38,13 +36,14 @@
     haguichi
     logmein-hamachi
     zerotierone
-    file-roller
+    kdePackages.ark
     loupe
     lazygit
     gnumake
     onlyoffice-desktopeditors
     adwaita-qt
     adwaita-qt6
+    winboat
     
     ## inputs stable
     #inputs.nixpkgs-stable.legacyPackages.${pkgs.stdenv.hostPlatform.system}

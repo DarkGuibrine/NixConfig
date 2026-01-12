@@ -1,13 +1,13 @@
 {
   description = "A very basic flake";
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable";
+    #nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable";
+    nixpkgs.url = "github:nixos/nixpkgs?ref=nixpkgs-unstable";
     nixpkgs-stable.url = "github:nixos/nixpkgs/nixos-25.11";
     nixpkgs-master.url = "github:nixos/nixpkgs";
-    aagl.url = "github:ezKEa/aagl-gtk-on-nix";
     nix-flatpak.url = "github:gmodena/nix-flatpak"; 
     preload-ng.url = "github:miguel-b-p/preload-ng"; 
-    nix-cachyos-kernel.url = "github:xddxdd/nix-cachyos-kernel/release";
+    chaotic.url = "github:lonerOrz/nyx-loner";
     home-manager = {
      url = "github:nix-community/home-manager/";
      inputs.nixpkgs.follows = "nixpkgs";
@@ -25,7 +25,7 @@
      inputs.nixpkgs.follows = "nixpkgs";
     };
   };
-  outputs = {self ,nixpkgs ,nixpkgs-stable ,nixpkgs-master ,home-manager ,zen-browser ,nur ,aagl ,hayase ,nix-flatpak ,preload-ng ,nix-cachyos-kernel , ...} @ inputs: {
+  outputs = {self ,nixpkgs ,nixpkgs-stable ,nixpkgs-master ,home-manager ,zen-browser ,nur ,hayase ,nix-flatpak ,preload-ng ,chaotic , ...} @ inputs: {
     nixosConfigurations = {
       "Alfa" = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
@@ -36,11 +36,7 @@
           nix-flatpak.nixosModules.nix-flatpak
           preload-ng.nixosModules.default 
 	        {services.preload-ng.enable = true;}
-          #{imports = [ aagl.nixosModules.default ];
-          #nix.settings = aagl.nixConfig; # Set up Cachix
-          #programs.anime-game-launcher.enable = true;
-          #programs.sleepy-launcher.enable = true;
-          #}
+          chaotic.nixosModules.default
         ];
     };
       };
