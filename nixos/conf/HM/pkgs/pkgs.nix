@@ -44,6 +44,7 @@
     #droidcam
     motrix
     mission-center
+    nodejs
     lxappearance
     ];
 

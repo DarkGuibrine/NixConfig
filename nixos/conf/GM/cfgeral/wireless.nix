@@ -4,6 +4,11 @@
   networking = {
     networkmanager.enable = true;
     interfaces.enp9s0.wakeOnLan.enable = true;
+    
+    firewall.allowedTCPPorts = [ ];
+    firewall.allowedUDPPorts = [
+       
+    ];
   };
 
   ## Ativar Bluetooth
