@@ -1,6 +1,8 @@
-{config, pkgs, ...}: {
-fonts.fontconfig.enable = true; 
-home.packages = with pkgs; [
+{ config, lib, inputs, pkgs, ... }: {
+
+  fonts.fontDir.enable = true;
+  fonts.fontconfig.enable = true;
+  fonts.packages = with pkgs; [
   nerd-fonts.jetbrains-mono
   nerd-fonts.ubuntu-mono
   nerd-fonts.ubuntu-sans
@@ -10,5 +12,6 @@ home.packages = with pkgs; [
   noto-fonts
   liberation_ttf
   dejavu_fonts
-];
+  ];
+
 }

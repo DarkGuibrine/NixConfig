@@ -33,5 +33,8 @@
     "widget.gtk.libadwaita-colors.enabled" = false;
   };
 
+  imports = [
+    ./thunar.nix
+  ];
 }
   

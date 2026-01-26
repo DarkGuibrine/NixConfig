@@ -6,7 +6,8 @@
     telegram-desktop
     pear-desktop
     element-desktop
-    (discord.override {withEquicord = true;})
+    #(discord.override {withEquicord = true;})
+    equibop
 
     ## Jogos
     lutris
@@ -27,7 +28,7 @@
     ## Utilitários do sistema e dev tools
     fastfetch
     flameshot
-    handbrake
+    #handbrake
     easyeffects
     qbittorrent
     cpu-x
@@ -46,6 +47,7 @@
     mission-center
     nodejs
     lxappearance
+
     ];
 
 

@@ -44,7 +44,8 @@
     adwaita-qt
     adwaita-qt6
     winboat
-    
+    xwayland-satellite
+
     ## inputs stable
     #inputs.nixpkgs-stable.legacyPackages.${pkgs.stdenv.hostPlatform.system}
     ];

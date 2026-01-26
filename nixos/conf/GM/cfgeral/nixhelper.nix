@@ -24,19 +24,22 @@
   nix.package = pkgs.lixPackageSets.latest.lix;
   #nix.package = inputs.nixpkgs-master.legacyPackages.${pkgs.system}.lix;
 
-  ## compilaçao
 
    nix = {
     settings = {
       cores = 0;
       max-jobs = "auto";
       auto-optimise-store = true;
+      extra-sandbox-paths = [ "/var/cache/ccache" ];
+
+      ## cache kernel
+      substituters = [ "https://attic.xuyh0120.win/lantian" ];
+      trusted-public-keys = [ "lantian:EeAUQ+W+6r7EtwnmYjeVwx5kOGEBpjlBfPlzGlTNvHc=" ];
     };
  };
    programs = { 
     ccache.enable = true;
     ccache.cacheDir = "/var/cache/ccache";
   };
-  nix.settings.extra-sandbox-paths = [ "/var/cache/ccache" ];
 
 }
