@@ -1,5 +1,12 @@
 { config, lib, inputs, pkgs, ... }: {
 
+  ## Variaveis de ambiente contendo o aumento de cache para placas da nvidia
+  environment.variables = {
+     __GL_SHADER_DISK_CACHE_SIZE = "12000000000";
+    VK_LAYER_PATH = "${pkgs.vulkan-validation-layers}/share/vulkan/explicit_layer.d";
+  };
+
+  ## Configuraçoes de boot para otimzar o kernel e alguns patchs para nvidia
   boot = {
     modprobeConfig.enable = true;
     kernelModules = [ "tcp_bbr" ];
@@ -27,6 +34,7 @@
       ];
     };
 
+  ## Otimizaçao do Udev para placas de Video da Nvidia
   udev = {
 	  enable = true;
 	  extraRules = ''
@@ -78,6 +86,19 @@
    '';
   };
 
+  ## sistema de compressao compressao brtfs
+  fileSystems = {
+    "/" = {
+      options = [ "compress=zstd:3" ];
+    };
+  };
+
+  ## confiuraçao da zram
+  zramSwap = {
+  enable = true;
+  memoryPercent = 40;
+  algorithm = "zstd";
+  };
 
 
 }

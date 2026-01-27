@@ -3,7 +3,7 @@
   imports =
     [ # Importa a configuração de hardware detectada
       ./hardware-configuration.nix
-      ./imp.nix
+      ./conf/GM/imp.nix
     ];
     
   ## Configuração do bootloader

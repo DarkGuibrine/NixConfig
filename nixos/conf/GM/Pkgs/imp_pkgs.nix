@@ -1,11 +1,7 @@
 { config, lib, inputs, pkgs, ... }: {
 
    imports = [
-    ./distrobox.nix
+    ./pkgsconfig.nix
     ./pkgs.nix
-    ./steam.nix
-    ./lact.nix
-    ./obs.nix
-    ./fontes.nix
   ];
 }

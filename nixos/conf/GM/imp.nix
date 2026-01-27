@@ -1,7 +1,7 @@
 { config, lib, inputs, pkgs, ... }: {
 
    imports = [
-    ./cfgeral/impcf.nix
+    ./configs/imp.nix
     ./DE/impde.nix
     ./Pkgs/imp_pkgs.nix
   ];
