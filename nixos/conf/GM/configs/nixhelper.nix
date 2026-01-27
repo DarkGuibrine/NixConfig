@@ -23,29 +23,25 @@
     ccache.cacheDir = "/var/cache/ccache";
 };
 
-  ## Configuração do gerenciador nix
-  nix.package = pkgs.lixPackageSets.latest.lix;
-  #nix.package = inputs.nixpkgs-master.legacyPackages.${pkgs.system}.lix;
-
-
    nix = {
     settings = {
       cores = 0;
       max-jobs = "auto";
       auto-optimise-store = true;
       extra-sandbox-paths = [ "/var/cache/ccache" ];
-
+    ## cache kernel
+      substituters = [ "https://attic.xuyh0120.win/lantian" ];
+      trusted-public-keys = [ "lantian:EeAUQ+W+6r7EtwnmYjeVwx5kOGEBpjlBfPlzGlTNvHc=" ];
+    };
+    
+    ## Lix
+    package = pkgs.lixPackageSets.latest.lix;
 
     ## ativaçao do flakes
       settings.experimental-features = ["nix-command" "flakes"];
       nixPath = lib.mapAttrsToList (key: _: "${key}=flake:${key}") config.nix.registry;
       registry = lib.mapAttrs (_: value: {flake = value;}) (lib.filterAttrs (_: value: lib.isType "flake" value) inputs);
       settings.flake-registry = "";
-
-    ## cache kernel
-      substituters = [ "https://attic.xuyh0120.win/lantian" ];
-      trusted-public-keys = [ "lantian:EeAUQ+W+6r7EtwnmYjeVwx5kOGEBpjlBfPlzGlTNvHc=" ];
-    };
  };
 
    services = {

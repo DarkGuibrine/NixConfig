@@ -25,6 +25,7 @@
   security.rtkit.enable = true;
 
   ## Configuraçao de idioma 
+  
   ## Definir fuso horário
   time.timeZone = "America/Bahia";
   ## Configurações de idioma e localidade
