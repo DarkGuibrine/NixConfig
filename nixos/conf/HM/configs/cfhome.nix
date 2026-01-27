@@ -1,4 +1,4 @@
-{config, pkgs, ...}: {
+{config, lib, inputs, pkgs, ... }: {
 
   ## starship
   programs.starship = {
