@@ -6,7 +6,7 @@
     telegram-desktop
     pear-desktop
     element-desktop
-    #(discord.override {withEquicord = true;})
+    #(discord.override { withEquicord = true; })
     equibop
 
     ## Jogos
@@ -49,6 +49,5 @@
     lxappearance
 
     ];
-
 
 }

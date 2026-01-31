@@ -45,6 +45,8 @@
     adwaita-qt6
     winboat
     xwayland-satellite
+    linux-wallpaperengine
+    
 
     ## inputs stable
     #inputs.nixpkgs-stable.legacyPackages.${pkgs.stdenv.hostPlatform.system}

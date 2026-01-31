@@ -1,5 +1,5 @@
 {config, lib, inputs, pkgs, ... }: {
-
+  
   ## starship
   programs.starship = {
   enable = true;

@@ -10,7 +10,7 @@
   boot = {
     #kernelPackages = pkgs.linuxPackages_latest;
     #kernelPackages = pkgs.linuxPackages_cachyos;
-    kernelPackages = inputs.nix-cachyos-kernel.legacyPackages.x86_64-linux.linuxPackages-cachyos-latest-lto;
+    kernelPackages = inputs.nix-cachyos-kernel.legacyPackages.x86_64-linux.linuxPackages-cachyos-latest-lto-x86_64-v3;
     loader.systemd-boot.enable = true;
     loader.efi.canTouchEfiVariables = true;
     loader.systemd-boot.configurationLimit = 10;
@@ -20,8 +20,8 @@
 
   services = {
     xserver.enable = false; # Ativar sistema gráfico X11
-    displayManager.autoLogin.enable = true;
-    displayManager.autoLogin.user = "gui";
+  #  displayManager.autoLogin.enable = true;
+  #  displayManager.autoLogin.user = "gui";
     printing.enable = false;
   };
 

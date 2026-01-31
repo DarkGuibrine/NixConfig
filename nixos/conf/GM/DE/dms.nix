@@ -6,8 +6,8 @@
 
   programs.dms-shell = {
   enable = true;
-  #package = inputs.dms.packages.${pkgs.stdenv.hostPlatform.system}.default;
-  #quickshell.package = inputs.quickshell.packages.${pkgs.stdenv.hostPlatform.system}.quickshell;
+  package = inputs.dms.packages.${pkgs.stdenv.hostPlatform.system}.default;
+  quickshell.package = inputs.quickshell.packages.${pkgs.stdenv.hostPlatform.system}.quickshell;
 
   systemd = {
     enable = true;             # Systemd service for auto-start
@@ -15,8 +15,9 @@
   };
 
   plugins = {
-    dankBitwarden.enable = true;
-    #DankKDEConnect.enable = true;
+    #dankBitwarden.enable = true;
+    dankKDEConnect.enable = true;
+    linuxWallpaperEngine.enable = true;
   };
   
   # Core features
@@ -29,7 +30,9 @@
 
   imports = [
     ./thunar.nix
-    #inputs.dms-plugin-registry.modules.default
+    inputs.dms.nixosModules.dank-material-shell
+    inputs.dms-plugin-registry.modules.default
+    inputs.dms.nixosModules.greeter
   ];
 
   xdg.portal = {
@@ -42,10 +45,12 @@
   programs.xwayland.enable = true;
   programs.kdeconnect.enable = true;
 
-  services.displayManager.dms-greeter = {
-    enable = true;
-    compositor.name = "niri"; 
-  };
+  #services.displayManager.dms-greeter = {
+  #  enable = true;
+  #  compositor.name = "hyprland";
+  #  package = inputs.dms.packages.${pkgs.stdenv.hostPlatform.system}.default;
+  #  quickshell.package = inputs.quickshell.packages.${pkgs.stdenv.hostPlatform.system}.quickshell;
+  #};
 
    services = {
     greetd =
@@ -60,13 +65,13 @@
         settings = {
           terminal.vt = 1;
           default_session = session;
-          initial_session = session;
+       initial_session = session;
         };
       };
-    displayManager.autoLogin = {
-      user = "gui";
-      enable = true;
     };
-  };
 
-}  
+  environment.systemPackages = with pkgs; [
+    dgop
+  ];
+
+}

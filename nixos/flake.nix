@@ -9,6 +9,12 @@
     #chaotic.url = "github:lonerOrz/nyx-loner";
     nix-cachyos-kernel.url = "github:xddxdd/nix-cachyos-kernel/release";
     aagl.url = "github:ezKEa/aagl-gtk-on-nix";
+    dms.url = "github:AvengeMedia/DankMaterialShell";
+    quickshell.url = "git+https://git.outfoxxed.me/quickshell/quickshell";
+    dms-plugin-registry = {
+      url = "github:AvengeMedia/dms-plugin-registry";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     home-manager = {
      url = "github:nix-community/home-manager/";
      inputs.nixpkgs.follows = "nixpkgs";
@@ -26,7 +32,7 @@
      inputs.nixpkgs.follows = "nixpkgs";
     };
   };
-  outputs = {self ,nixpkgs ,nixpkgs-stable ,nixpkgs-master ,home-manager ,zen-browser ,nur ,hayase ,preload-ng ,nix-cachyos-kernel ,aagl , ...} @ inputs: {
+  outputs = {self ,nixpkgs ,nixpkgs-stable ,nixpkgs-master ,home-manager ,zen-browser ,nur ,hayase ,preload-ng ,nix-cachyos-kernel ,aagl ,dms ,dms-plugin-registry ,quickshell , ...} @ inputs: {
     nixosConfigurations = {
       "Alfa" = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
