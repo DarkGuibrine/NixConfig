@@ -5,9 +5,8 @@
     ## aplicativos sociais
     telegram-desktop
     pear-desktop
-    element-desktop
-    #(discord.override { withEquicord = true; })
-    equibop
+    #element-desktop
+    (discord.override {withEquicord = true;})
 
     ## Jogos
     lutris
@@ -15,6 +14,7 @@
     heroic
     prismlauncher
     steam
+    adwsteamgtk
     ryubing
     xclicker
     #mangojuice
@@ -47,7 +47,9 @@
     mission-center
     nodejs
     lxappearance
+    nwg-look
 
     ];
+
 
 }

@@ -1,7 +1,9 @@
 { config, lib, inputs, pkgs, ... }: {
 
-  programs.niri = {
+  nixpkgs.overlays = [ inputs.niri.overlays.niri ];
+  programs.niri  = {
     enable = true;
+    package = pkgs.niri-unstable;
   };
 
   programs.dms-shell = {
@@ -42,6 +44,7 @@
   };
 
   security.polkit.enable = true;
+  systemd.user.services.niri-flake-polkit.enable = false;
   programs.xwayland.enable = true;
   programs.kdeconnect.enable = true;
 
@@ -52,26 +55,28 @@
   #  quickshell.package = inputs.quickshell.packages.${pkgs.stdenv.hostPlatform.system}.quickshell;
   #};
 
-   services = {
-    greetd =
-      let
-        session = {
-          command = "${pkgs.niri}/bin/niri-session";
-          user = "gui";
-        };
-      in
-      {
-        enable = true;
-        settings = {
-          terminal.vt = 1;
-          default_session = session;
-       initial_session = session;
-        };
-      };
-    };
+  services = {
+   greetd =
+     let
+       session = {
+         #command = "${pkgs.hyprland}/bin/Hyprland";
+         command = "${pkgs.niri}/bin/niri-session";
+         user = "gui";
+       };
+     in
+     {
+       enable = true;
+       settings = {
+         terminal.vt = 1;
+         default_session = session;
+      initial_session = session;
+       };
+     };
+   };
 
   environment.systemPackages = with pkgs; [
     dgop
   ];
+
 
 }

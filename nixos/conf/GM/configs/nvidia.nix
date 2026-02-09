@@ -1,6 +1,7 @@
 { config, lib, inputs, pkgs, ... }: {
   
   ## Driver da nvidia proprietario 
+  
   services.xserver.videoDrivers = [ "nvidia" ];
    hardware = {
     graphics.enable = true;

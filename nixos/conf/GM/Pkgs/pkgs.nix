@@ -46,6 +46,7 @@
     winboat
     xwayland-satellite
     linux-wallpaperengine
+    kdePackages.polkit-qt-1
     
 
     ## inputs stable

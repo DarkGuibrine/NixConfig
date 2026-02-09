@@ -43,5 +43,5 @@
     };
   };
   
-  system.stateVersion = "25.05";  # versao do nix
+  system.stateVersion = "25.11";  # versao do nix
 }

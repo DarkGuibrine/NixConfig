@@ -29,8 +29,18 @@
       name = "Adwaita-dark";
       package = pkgs.gnome-themes-extra;
     };
-    gtk3.extraConfig.gtk-application-prefer-dark-theme = 1;
-    gtk4.extraConfig.gtk-application-prefer-dark-theme = 1;
+    cursorTheme = {
+      name = "Adwaita";
+     # package = pkgs.Adwaita-awcursors;
+    };
+    gtk3.extraConfig = {
+      gtk-application-prefer-dark-theme = 1;
+      "gtk-cursor-theme-name" = "Adwaita";
+    };
+    gtk4.extraConfig = {
+      gtk-application-prefer-dark-theme = 1;
+       Settings = '' gtk-cursor-theme-name=Adwaita '';
+    };
   };
 
   qt = {
