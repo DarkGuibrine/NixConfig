@@ -5,5 +5,6 @@
     ./nixhelper.nix
     ./nvidia.nix
     ./patchs.nix
+    ./self-host.nix
   ];
 }

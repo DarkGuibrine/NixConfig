@@ -5,8 +5,11 @@
     ## aplicativos sociais
     telegram-desktop
     pear-desktop
-    #element-desktop
+    stoat-desktop
+    teams-for-linux
+    #(discord.override {withVencord = true;})
     (discord.override {withEquicord = true;})
+    jellyfin-desktop
 
     ## Jogos
     lutris
@@ -40,7 +43,7 @@
     kitty
     vlc
     tree
-    python3
+    python314
     unrar
     #droidcam
     motrix
@@ -48,8 +51,16 @@
     nodejs
     lxappearance
     nwg-look
+    #rustdesk
+    anydesk
+    libargon2
+    openssl_oqs
+
+    ## Dev
 
     ];
 
-
+    nixpkgs.config.permittedInsecurePackages = [
+    "electron-38.8.4"
+    ];
 }

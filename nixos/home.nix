@@ -39,7 +39,7 @@
     };
     gtk4.extraConfig = {
       gtk-application-prefer-dark-theme = 1;
-       Settings = '' gtk-cursor-theme-name=Adwaita '';
+       Settings = ''gtk-cursor-theme-name=Adwaita'';
     };
   };
 

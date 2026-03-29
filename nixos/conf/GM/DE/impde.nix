@@ -4,7 +4,7 @@
     #./cosmic.nix
     #./gnome.nix
     #./kde.nix
-    ./dms.nix
+    ./niri/niri.nix
   ];
 
 }

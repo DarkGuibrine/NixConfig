@@ -7,10 +7,14 @@
     nixpkgs-master.url = "github:nixos/nixpkgs";
     preload-ng.url = "github:miguel-b-p/preload-ng"; 
     #chaotic.url = "github:lonerOrz/nyx-loner";
-    nix-cachyos-kernel.url = "github:xddxdd/nix-cachyos-kernel/release";
+    nix-cachyos-kernel.url = "github:xddxdd/nix-cachyos-kernel";
     aagl.url = "github:ezKEa/aagl-gtk-on-nix";
     dms.url = "github:AvengeMedia/DankMaterialShell";
     niri.url = "github:sodiboo/niri-flake";
+    sops-nix = {
+      url = "github:Mic92/sops-nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     dms-plugin-registry = {
       url = "github:AvengeMedia/dms-plugin-registry";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -31,12 +35,16 @@
      url = "github:0xc000022070/zen-browser-flake";
      inputs.nixpkgs.follows = "nixpkgs";
     };
-    hayase = {
-     url = "github:darkguibrine/hayase-nix";
+    shiru = {
+     url = "github:darkguibrine/shiru-nix";
      inputs.nixpkgs.follows = "nixpkgs";
     };
+    noctalia = {
+      url = "github:noctalia-dev/noctalia-shell";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
-  outputs = {self ,nixpkgs ,nixpkgs-stable ,nixpkgs-master ,home-manager ,zen-browser ,nur ,hayase ,preload-ng ,nix-cachyos-kernel ,aagl ,dms ,dms-plugin-registry ,quickshell ,niri , ...} @ inputs: {
+  outputs = {self ,nixpkgs ,nixpkgs-stable ,nixpkgs-master ,home-manager ,zen-browser ,nur ,shiru ,preload-ng ,nix-cachyos-kernel ,aagl ,sops-nix ,dms ,quickshell ,dms-plugin-registry  ,niri ,noctalia , ...} @ inputs: {
     nixosConfigurations = {
       "Alfa" = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
@@ -46,6 +54,7 @@
           nur.modules.nixos.default
           preload-ng.nixosModules.default 
           niri.nixosModules.niri
+          sops-nix.nixosModules.sops
 	        {services.preload-ng.enable = true;}
           #chaotic.nixosModules.default
           {imports = [ aagl.nixosModules.default ];

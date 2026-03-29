@@ -8,9 +8,9 @@
     
   ## Configuração do bootloader
   boot = {
-    #kernelPackages = pkgs.linuxPackages_latest;
+    kernelPackages = pkgs.linuxPackages_latest;
     #kernelPackages = pkgs.linuxPackages_cachyos;
-    kernelPackages = inputs.nix-cachyos-kernel.legacyPackages.x86_64-linux.linuxPackages-cachyos-latest-lto-x86_64-v3;
+    #kernelPackages = inputs.nix-cachyos-kernel.legacyPackages.x86_64-linux.linuxPackages-cachyos-latest-lto-x86_64-v3;
     loader.systemd-boot.enable = true;
     loader.efi.canTouchEfiVariables = true;
     loader.systemd-boot.configurationLimit = 10;
@@ -20,8 +20,6 @@
 
   services = {
     xserver.enable = false; # Ativar sistema gráfico X11
-  #  displayManager.autoLogin.enable = true;
-  #  displayManager.autoLogin.user = "gui";
     printing.enable = false;
   };
 
@@ -44,4 +42,18 @@
   };
   
   system.stateVersion = "25.11";  # versao do nix
+
+    networking = {
+    networkmanager.enable = true;
+    interfaces.enp9s0.wakeOnLan.enable = true;
+    firewall.allowedTCPPorts = [ ];
+    firewall.allowedUDPPorts = [
+    ];
+  };
+    services = {
+    displayManager.autoLogin.enable = true;
+    displayManager.autoLogin.user = "gui";
+  };
+
+  nix.settings.experimental-features = [ "nix-command" "flakes" ];
 }

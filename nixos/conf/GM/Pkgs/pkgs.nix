@@ -6,10 +6,12 @@
     environment.systemPackages = with pkgs; [
     ## Aplicativos sociais
     bitwarden-desktop
+    sunshine
+    tailscale
 
     ## inputs
     inputs.zen-browser.packages.${stdenv.hostPlatform.system}.default
-    inputs.hayase.packages.${pkgs.stdenv.hostPlatform.system}.default 
+    inputs.shiru.packages.${pkgs.stdenv.hostPlatform.system}.default 
 
     ## Utilitários do sistema e dev tools
     nh
@@ -20,8 +22,7 @@
     gcc
     ethtool
     efibootmgr
-    docker-compose 
-    podman
+    docker-compose
     distroshelf
     distrobox
     freerdp   
@@ -32,7 +33,8 @@
     usbutils
     openrgb
     winetricks
-    wineWowPackages.staging
+    #wineWowPackages.staging
+    wine
     haguichi
     logmein-hamachi
     zerotierone
@@ -43,18 +45,25 @@
     onlyoffice-desktopeditors
     adwaita-qt
     adwaita-qt6
-    winboat
+    #winboat
     xwayland-satellite
     linux-wallpaperengine
-    kdePackages.polkit-qt-1
+    #kdePackages.polkit-qt-1
+    kdePackages.krdp
+    cloudflared
     
 
     ## inputs stable
     #inputs.nixpkgs-stable.legacyPackages.${pkgs.stdenv.hostPlatform.system}
+    inputs.nixpkgs-stable.legacyPackages.${pkgs.stdenv.hostPlatform.system}.winboat
     ];
 
     programs.gpu-screen-recorder.enable = true;
     services.logmein-hamachi.enable = true;
     programs.haguichi.enable = true;
+    
+    nixpkgs.config.permittedInsecurePackages = [
+    "electron-38.8.4"
+    ];
     
 }

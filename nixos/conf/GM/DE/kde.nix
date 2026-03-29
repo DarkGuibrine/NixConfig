@@ -2,9 +2,10 @@
 
   ## Ativar ambiente gráfico KDE Plasma 6 e gerenciador de login SDDM
   services = {
-    displayManager.sddm.enable = true;
-    displayManager.sddm.wayland.enable = true;
     desktopManager.plasma6.enable = true;
+  };
+  services.displayManager.plasma-login-manager = {
+    enable = true;
   };
 
   programs.kdeconnect.enable = true;
@@ -15,6 +16,8 @@
     kdePackages.qtmultimedia
     kdePackages.kcalc
     kdePackages.sddm-kcm
+    kdePackages.wallpaper-engine-plugin
+    kdePackages.krdp
    ];
 
   environment.plasma6.excludePackages = with pkgs.kdePackages; [

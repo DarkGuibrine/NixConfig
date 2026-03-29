@@ -30,8 +30,8 @@
       auto-optimise-store = true;
       extra-sandbox-paths = [ "/var/cache/ccache" ];
     ## cache kernel
-      substituters = [ "https://attic.xuyh0120.win/lantian" ];
-      trusted-public-keys = [ "lantian:EeAUQ+W+6r7EtwnmYjeVwx5kOGEBpjlBfPlzGlTNvHc=" ];
+      substituters = ["https://attic.xuyh0120.win/lantian"];
+      trusted-public-keys = ["lantian:EeAUQ+W+6r7EtwnmYjeVwx5kOGEBpjlBfPlzGlTNvHc="];
     };
     
     ## Lix

@@ -13,12 +13,11 @@
     gamemode.enable = true;
   };
 
-
   ## Configuraçoes do obs
 
   #programs.obs-studio = {
   #  enable = true;
-  #  # optional Nvidia hardware acceleration
+  #   #optional Nvidia hardware acceleration
   #  package = (
   #    pkgs.obs-studio.override {
   #      cudaSupport = true;
@@ -30,7 +29,7 @@
   #    obs-gstreamer
   #    obs-vkcapture
   #  ];
-   #enableVirtualCamera = true;
+  # #enableVirtualCamera = true;
   #};
 
   ## Configuraçoes do LACT
@@ -45,18 +44,6 @@
     enable = true;
   };
 
-  ## Configuraçao de Docker
-
-  #virtualisation.podman = {
-  #enable = true;
-  #dockerCompat = true;
-  #};
-
-  users.users.gui.extraGroups = [ "docker" ];
-  users.groups.docker.gid = 131;
-  virtualisation.docker = {
-  enable = true;
-  };
 
   ## Fontes
   fonts.fontDir.enable = true;
