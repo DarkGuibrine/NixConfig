@@ -6,16 +6,10 @@
    hardware = {
     graphics.enable = true;
     nvidia.open = false; ## Se sua placa for pascal pra cima troque isso para true
+    nvidia.package = config.boot.kernelPackages.nvidiaPackages.legacy_580;
   };
 
-  hardware.nvidia.package = config.boot.kernelPackages.nvidiaPackages.mkDriver {
-    version = "580.142";
-    sha256_64bit = "sha256-IJFfzz/+icNVDPk7YKBKKFRTFQ2S4kaOGRGkNiBEdWM=";
-    sha256_aarch64 = lib.fakeSha256;
-    openSha256 = lib.fakeSha256;
-    settingsSha256 = "sha256-BnrIlj5AvXTfqg/qcBt2OS9bTDDZd3uhf5jqOtTMTQM=";
-    persistencedSha256 = lib.fakeSha256;
-  };
+
 
 
 

@@ -5,6 +5,7 @@
     #./gnome.nix
     #./kde.nix
     ./niri/niri.nix
+    
   ];
 
 }

@@ -3,7 +3,7 @@
   ## tailscale
   services.tailscale = {
   enable = true;
-  extraUpFlags = [ "--advertise-exit-node" "--ssh"];
+  extraUpFlags = [ "--exit-node=100.121.29.98" "--exit-node-allow-lan-access=true" "--ssh" "--accept-dns=true" ];
   };
   networking.nftables.enable = true;
   networking.firewall = {
