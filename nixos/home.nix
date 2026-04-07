@@ -23,35 +23,35 @@
   flakePath = "/etc/nixos";
   };
 
-  gtk = { 
-    enable = true;
-    theme = {
-      name = "Adwaita-dark";
-      package = pkgs.gnome-themes-extra;
-    };
-    cursorTheme = {
-      name = "Adwaita";
-     # package = pkgs.Adwaita-awcursors;
-    };
-    gtk3.extraConfig = {
-      gtk-application-prefer-dark-theme = 1;
-      "gtk-cursor-theme-name" = "Adwaita";
-    };
-    gtk4.extraConfig = {
-      gtk-application-prefer-dark-theme = 1;
-       Settings = ''gtk-cursor-theme-name=Adwaita'';
-    };
-  };
-
-  qt = {
-    enable = true;
-    style = {
-    name = "adwaita-dark";
-   };
-  };
-
-  xdg.configFile."gtk-3.0/settings.ini".force = true;
-  xdg.configFile."gtk-4.0/settings.ini".force = true;
+  #gtk = { 
+  #  enable = true;
+  #  theme = {
+  #    name = "Adwaita-dark";
+  #    package = pkgs.gnome-themes-extra;
+  #  };
+  #  cursorTheme = {
+  #    name = "Adwaita";
+  #   # package = pkgs.Adwaita-awcursors;
+  #  };
+  #  gtk3.extraConfig = {
+  #    gtk-application-prefer-dark-theme = 1;
+  #    "gtk-cursor-theme-name" = "Adwaita";
+  #  };
+  #  gtk4.extraConfig = {
+  #    gtk-application-prefer-dark-theme = 1;
+  #     Settings = ''gtk-cursor-theme-name=Adwaita'';
+  #  };
+  #};
+#
+  #qt = {
+  #  enable = true;
+  #  style = {
+  #  name = "adwaita-dark";
+  # };
+  #};
+#
+  #xdg.configFile."gtk-3.0/settings.ini".force = true;
+  #xdg.configFile."gtk-4.0/settings.ini".force = true;
 
 
 }

@@ -45,7 +45,7 @@
     tree
     python314
     unrar
-    #droidcam
+    droidcam
     motrix
     mission-center
     nodejs

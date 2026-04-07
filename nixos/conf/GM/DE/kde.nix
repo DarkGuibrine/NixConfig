@@ -1,6 +1,6 @@
 { config, lib, inputs, pkgs, ... }: {
 
-  ## Ativar ambiente gráfico KDE Plasma 6 e gerenciador de login SDDM
+  ## Ativar ambiente gráfico KDE Plasma 6 e gerenciador de login
   services = {
     desktopManager.plasma6.enable = true;
   };
@@ -18,11 +18,12 @@
     kdePackages.sddm-kcm
     kdePackages.wallpaper-engine-plugin
     kdePackages.krdp
+    kdePackages.accounts-qt
    ];
 
   environment.plasma6.excludePackages = with pkgs.kdePackages; [
     plasma-browser-integration
-    konsole
+   # konsole
     elisa
    ]; 
      

@@ -3,6 +3,5 @@
    imports = [
     ./pkgsconfig.nix
     ./pkgs.nix
-    ./cloudflared.nix
   ];
 }

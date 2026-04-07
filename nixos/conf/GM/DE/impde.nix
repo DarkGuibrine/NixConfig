@@ -3,8 +3,8 @@
    imports = [
     #./cosmic.nix
     #./gnome.nix
-    #./kde.nix
-    ./niri/niri.nix
+    ./kde.nix
+    #./niri/niri.nix
     
   ];
 
