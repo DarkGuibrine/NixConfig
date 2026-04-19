@@ -62,7 +62,7 @@
           specialArgs = { inherit inputs; };
           modules = [
             ./hosts/Alfa/configuration.nix
-            ./mods/nixos/nixos.ni
+            ./mods/nixos/nixos.nix
             preload-ng.nixosModules.default
             #niri.nixosModules.niri
             #sops-nix.nixosModules.sops
