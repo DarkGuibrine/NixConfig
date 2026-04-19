@@ -6,8 +6,6 @@
     nixpkgs-stable.url = "github:nixos/nixpkgs/nixos-25.11";
     nixpkgs-master.url = "github:nixos/nixpkgs";
     preload-ng.url = "github:miguel-b-p/preload-ng";
-    #chaotic.url = "github:lonerOrz/nyx-loner";
-    nix-cachyos-kernel.url = "github:xddxdd/nix-cachyos-kernel";
     aagl.url = "github:ezKEa/aagl-gtk-on-nix";
     disko.url = "github:nix-community/disko";
     home-manager = {
@@ -47,7 +45,6 @@
       zen-browser,
       shiru,
       preload-ng,
-      nix-cachyos-kernel,
       aagl,
       noctalia,
       niri,
