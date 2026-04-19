@@ -79,12 +79,14 @@
       };
 
       ## VPS
-      nixosConfigurations.darkgui-vps = nixpkgs.lib.nixosSystem {
-        system = "aarch64-linux";
-        specialArgs = { inherit inputs; };
-        modules = [
-          ./hosts/darkgui-vps/configuration.nix
-        ];
+      nixosConfigurations = {
+        "darkgui-vps" = nixpkgs.lib.nixosSystem {
+          system = "aarch64-linux";
+          specialArgs = { inherit inputs; };
+          modules = [
+            ./hosts/darkgui-vps/configuration.nix
+          ];
+        };
       };
 
       ## home manager
