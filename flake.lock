@@ -23,11 +23,11 @@
     "cachyos-kernel": {
       "flake": false,
       "locked": {
-        "lastModified": 1776183001,
-        "narHash": "sha256-lvLKB5dTqjO1S/YonS9ZyWemEjO6QXtN4D76rYEYy4s=",
+        "lastModified": 1776608760,
+        "narHash": "sha256-ehDv8bF7k/2Kf4b8CCoSm51U/MOoFuLsRXqe5wZ57sE=",
         "owner": "CachyOS",
         "repo": "linux-cachyos",
-        "rev": "4224303b6d7a50dd1cc3ffa78864050cc9536eec",
+        "rev": "7e06e29005853bbaaa3b1c1067f915d6e0db728a",
         "type": "github"
       },
       "original": {
@@ -52,12 +52,6 @@
         "type": "github"
       }
     },
-<<<<<<< HEAD
-    "dms": {
-      "inputs": {
-        "flake-compat": "flake-compat_2",
-        "nixpkgs": "nixpkgs_3",
-=======
     "disko": {
       "inputs": {
         "nixpkgs": "nixpkgs_3"
@@ -80,7 +74,6 @@
       "inputs": {
         "flake-compat": "flake-compat_2",
         "nixpkgs": "nixpkgs_4",
->>>>>>> d196fd5 (Adicionado a configuraçao da VPS)
         "quickshell": "quickshell"
       },
       "locked": {
@@ -246,11 +239,7 @@
       "inputs": {
         "niri-stable": "niri-stable",
         "niri-unstable": "niri-unstable",
-<<<<<<< HEAD
-        "nixpkgs": "nixpkgs_4",
-=======
         "nixpkgs": "nixpkgs_5",
->>>>>>> d196fd5 (Adicionado a configuraçao da VPS)
         "nixpkgs-stable": "nixpkgs-stable",
         "xwayland-satellite-stable": "xwayland-satellite-stable",
         "xwayland-satellite-unstable": "xwayland-satellite-unstable"
@@ -308,18 +297,14 @@
         "cachyos-kernel-patches": "cachyos-kernel-patches",
         "flake-compat": "flake-compat_3",
         "flake-parts": "flake-parts",
-<<<<<<< HEAD
-        "nixpkgs": "nixpkgs_5"
-=======
         "nixpkgs": "nixpkgs_6"
->>>>>>> d196fd5 (Adicionado a configuraçao da VPS)
       },
       "locked": {
-        "lastModified": 1776535646,
-        "narHash": "sha256-ynXxDJ66ZgN7NlXuMxH9aIMnmiX4Q4ZhdEDie9Klnfc=",
+        "lastModified": 1776622065,
+        "narHash": "sha256-yv+04KR/xndDJ8lID/LHpMuYhMCrQfR58ABGTl2OyQ0=",
         "owner": "xddxdd",
         "repo": "nix-cachyos-kernel",
-        "rev": "c5b2b559d888644417de5eb3939548854fa4d837",
+        "rev": "61a3cabe264695c487c6266a7536e5806323985e",
         "type": "github"
       },
       "original": {
@@ -361,11 +346,11 @@
     },
     "nixpkgs-master": {
       "locked": {
-        "lastModified": 1776616485,
-        "narHash": "sha256-n+j1THgYwvcKhB5G29+mpcb9NJMM1wDMVavnn0zRCsA=",
+        "lastModified": 1776623719,
+        "narHash": "sha256-pC+z6tbac4zqiPSMYXFhrCctfr1y33Ky+UjMwGG7HJc=",
         "owner": "nixos",
         "repo": "nixpkgs",
-        "rev": "e8ac1bbff8b912dcf00b8fd347e62e581095c9bb",
+        "rev": "70bcfffcb16f04f40ca019a8ef4461bae9d198dd",
         "type": "github"
       },
       "original": {
@@ -424,8 +409,6 @@
     },
     "nixpkgs_3": {
       "locked": {
-<<<<<<< HEAD
-=======
         "lastModified": 1773628058,
         "narHash": "sha256-hpXH0z3K9xv0fHaje136KY872VT2T5uwxtezlAskQgY=",
         "owner": "NixOS",
@@ -442,7 +425,6 @@
     },
     "nixpkgs_4": {
       "locked": {
->>>>>>> d196fd5 (Adicionado a configuraçao da VPS)
         "lastModified": 1776169885,
         "narHash": "sha256-l/iNYDZ4bGOAFQY2q8y5OAfBBtrDAaPuRQqWaFHVRXM=",
         "owner": "nixos",
@@ -457,11 +439,7 @@
         "type": "github"
       }
     },
-<<<<<<< HEAD
-    "nixpkgs_4": {
-=======
     "nixpkgs_5": {
->>>>>>> d196fd5 (Adicionado a configuraçao da VPS)
       "locked": {
         "lastModified": 1776169885,
         "narHash": "sha256-l/iNYDZ4bGOAFQY2q8y5OAfBBtrDAaPuRQqWaFHVRXM=",
@@ -477,17 +455,13 @@
         "type": "github"
       }
     },
-<<<<<<< HEAD
-    "nixpkgs_5": {
-=======
     "nixpkgs_6": {
->>>>>>> d196fd5 (Adicionado a configuraçao da VPS)
       "locked": {
-        "lastModified": 1776475594,
-        "narHash": "sha256-mxLieVl5lqjd+QUvgHbvpVrvb9d8zox7m+MiRO6FHu8=",
+        "lastModified": 1776544041,
+        "narHash": "sha256-ryzOZLvuS/4ZbYJzR8+wYZpyG/Ssp6BAe6oTQ8ttAqU=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "9a3a5b8400951b3497d2ef8f239f8451175cf3a1",
+        "rev": "f731538cdf1410a3c53d3a75a6a1142afc08e3af",
         "type": "github"
       },
       "original": {
@@ -497,11 +471,7 @@
         "type": "github"
       }
     },
-<<<<<<< HEAD
-    "nixpkgs_6": {
-=======
     "nixpkgs_7": {
->>>>>>> d196fd5 (Adicionado a configuraçao da VPS)
       "locked": {
         "lastModified": 1776329215,
         "narHash": "sha256-a8BYi3mzoJ/AcJP8UldOx8emoPRLeWqALZWu4ZvjPXw=",
@@ -517,11 +487,7 @@
         "type": "github"
       }
     },
-<<<<<<< HEAD
-    "nixpkgs_7": {
-=======
     "nixpkgs_8": {
->>>>>>> d196fd5 (Adicionado a configuraçao da VPS)
       "locked": {
         "lastModified": 1776169885,
         "narHash": "sha256-l/iNYDZ4bGOAFQY2q8y5OAfBBtrDAaPuRQqWaFHVRXM=",
@@ -545,11 +511,11 @@
         "noctalia-qs": "noctalia-qs"
       },
       "locked": {
-        "lastModified": 1776606976,
-        "narHash": "sha256-SeNsAS55P7QsPh0MsxRqKwN2sS2DDPCh7AR7YsRoNwo=",
+        "lastModified": 1776618193,
+        "narHash": "sha256-Gs4vQgD9+84qwP5WmlD1WJ4yOeX4M/a4ZdNUwrce6E0=",
         "owner": "noctalia-dev",
         "repo": "noctalia-shell",
-        "rev": "d9531258d9a1dadb7c1feca1c94b69e0097fbb06",
+        "rev": "b8781aef49e1e5f2c094bc4b73ca146a1665d9df",
         "type": "github"
       },
       "original": {
@@ -584,11 +550,7 @@
     "preload-ng": {
       "inputs": {
         "flake-utils": "flake-utils",
-<<<<<<< HEAD
-        "nixpkgs": "nixpkgs_7"
-=======
         "nixpkgs": "nixpkgs_8"
->>>>>>> d196fd5 (Adicionado a configuraçao da VPS)
       },
       "locked": {
         "lastModified": 1768356181,
@@ -649,20 +611,13 @@
     "root": {
       "inputs": {
         "aagl": "aagl",
-<<<<<<< HEAD
-=======
         "disko": "disko",
->>>>>>> d196fd5 (Adicionado a configuraçao da VPS)
         "dms": "dms",
         "dms-plugin-registry": "dms-plugin-registry",
         "home-manager": "home-manager",
         "niri": "niri",
         "nix-cachyos-kernel": "nix-cachyos-kernel",
-<<<<<<< HEAD
-        "nixpkgs": "nixpkgs_6",
-=======
         "nixpkgs": "nixpkgs_7",
->>>>>>> d196fd5 (Adicionado a configuraçao da VPS)
         "nixpkgs-master": "nixpkgs-master",
         "nixpkgs-stable": "nixpkgs-stable_2",
         "noctalia": "noctalia",
