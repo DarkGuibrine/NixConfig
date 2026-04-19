@@ -13,6 +13,5 @@
     ./nvidia.nix
     ./patchs.nix
     ./self-host.nix
-    ./kernel.nix
   ];
 }
