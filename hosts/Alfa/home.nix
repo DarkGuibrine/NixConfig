@@ -25,7 +25,7 @@
 
   mods = {
     kitty.enable = true;
-    flakePath = "/self";
+    flakePath = "/etc/nixos";
   };
 
   gtk = {
