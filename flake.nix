@@ -9,6 +9,10 @@
     #chaotic.url = "github:lonerOrz/nyx-loner";
     nix-cachyos-kernel.url = "github:xddxdd/nix-cachyos-kernel";
     aagl.url = "github:ezKEa/aagl-gtk-on-nix";
+<<<<<<< HEAD
+=======
+    disko.url = "github:nix-community/disko";
+>>>>>>> d196fd5 (Adicionado a configuraçao da VPS)
     home-manager = {
       url = "github:nix-community/home-manager/";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -50,6 +54,10 @@
       aagl,
       noctalia,
       niri,
+<<<<<<< HEAD
+=======
+      disko,
+>>>>>>> d196fd5 (Adicionado a configuraçao da VPS)
       ...
     }@inputs:
     {
@@ -81,7 +89,11 @@
         system = "aarch64-linux";
         specialArgs = { inherit inputs; };
         modules = [
+<<<<<<< HEAD
           #./configuration.nix
+=======
+          ./hosts/darkgui-vps/configuration.nix
+>>>>>>> d196fd5 (Adicionado a configuraçao da VPS)
         ];
       };
 
