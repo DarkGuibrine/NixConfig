@@ -44,7 +44,10 @@ in
         "wheel"
         "docker"
       ];
-      openssh.authorizedKeys.keys = [ vars.sshKey ];
+      openssh.authorizedKeys.keys = [
+        vars.sshKey
+        "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIJZyQIEUCZPUJBocZGx/MUq/WWRSP6O1+rOB2kWHV6Lm u0_a369@localhost"
+      ];
     };
   };
 
