@@ -44,9 +44,16 @@ in
         "wheel"
         "docker"
       ];
+      openssh.authorizedKeys.keys = vars.sshKey;
+    };
+    users.godot = {
+      isNormalUser = true;
+      extraGroups = [
+      ];
       openssh.authorizedKeys.keys = [
-        vars.sshKey
-        "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIJZyQIEUCZPUJBocZGx/MUq/WWRSP6O1+rOB2kWHV6Lm u0_a369@localhost"
+        "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIHd9zC2Hux0OW57hQ2djiisa2jyTrZOQcS2FLFkQohvI rangelsm2013@gmail.com"
+        "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIHr63aXlTSmorypxb689ApdqjEmyTKJbLtelYsvQpBdu darkgui@protonmail.com"
+        "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIIbKfzdNXMkQ0ADyH+Hgx7uqRx3HdJ0Y+PFZ3lmYz8Q0 rangelsm2013@gmail.com"
       ];
     };
   };
