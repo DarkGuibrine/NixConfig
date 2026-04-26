@@ -12,9 +12,10 @@
     ./conf/GM/imp.nix
   ];
 
-  ## Configuração do bootloader
+  ## Configuraçãao do bootloader
   boot = {
     kernelPackages = pkgs.linuxPackages_latest;
+    #kernelPackages = pkgs.linux-cachyos-latest-lto-x86_64-v3;
     loader.systemd-boot.enable = true;
     loader.efi.canTouchEfiVariables = true;
     loader.systemd-boot.configurationLimit = 10;
@@ -34,6 +35,8 @@
     extraGroups = [
       "networkmanager"
       "wheel"
+      "tailscale"
+      "docker"
     ];
     packages = with pkgs; [ ];
   };

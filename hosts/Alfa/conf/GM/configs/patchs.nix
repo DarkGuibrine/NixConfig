@@ -17,9 +17,10 @@
   boot = {
     modprobeConfig.enable = true;
     kernelModules = [ "tcp_bbr" ];
-    extraModprobeConfig = "options nvidia NVreg_UsePageAttributeTable=1 \
-    NVreg_InitializeSystemMemoryAllocations=0 \
-    NVreg_DynamicPowerManagement=0x02";
+    extraModprobeConfig = ''
+      options nvidia NVreg_UsePageAttributeTable=1
+      NVreg_InitializeSystemMemoryAllocations=0
+      NVreg_DynamicPowerManagement=0x02 '';
     kernel.sysctl = {
       "kernel.split_lock_mitigate" = 0;
       "kernel.nmi_watchdog" = 0;

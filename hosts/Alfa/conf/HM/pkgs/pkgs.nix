@@ -13,12 +13,12 @@
     telegram-desktop
     pear-desktop
     teams-for-linux
-    #(discord.override {withVencord = true;})
+    #(discord.override { withVencord = true; })
     (discord.override { withEquicord = true; })
     jellyfin-desktop
 
     ## Jogos
-    lutris
+    #lutris
     faugus-launcher
     heroic
     prismlauncher
@@ -66,6 +66,10 @@
     libargon2
     openssl_oqs
     icu
+    kdePackages.qt6ct
+    libsForQt5.qt5ct
+    pkgs.gnome-themes-extra
+    papirus-icon-theme
 
     ## Dev
     godot

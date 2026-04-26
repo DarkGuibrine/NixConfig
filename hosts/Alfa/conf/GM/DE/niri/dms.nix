@@ -10,7 +10,7 @@
   programs.dms-shell = {
     enable = true;
     package = inputs.dms.packages.${pkgs.stdenv.hostPlatform.system}.default;
-    #quickshell.package = inputs.quickshell.packages.${pkgs.stdenv.hostPlatform.system}.quickshell;
+    quickshell.package = inputs.quickshell.packages.${pkgs.stdenv.hostPlatform.system}.quickshell;
 
     systemd = {
       enable = true; # Systemd service for auto-start
@@ -18,10 +18,7 @@
     };
 
     plugins = {
-      dankBitwarden.enable = true;
-      dankKDEConnect.enable = true;
-      linuxWallpaperEngine.enable = true;
-      nvidiaGpuMonitor.enable = true;
+
     };
 
     # Core features

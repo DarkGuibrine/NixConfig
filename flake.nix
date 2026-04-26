@@ -8,6 +8,7 @@
     preload-ng.url = "github:miguel-b-p/preload-ng";
     aagl.url = "github:ezKEa/aagl-gtk-on-nix";
     disko.url = "github:nix-community/disko";
+    nix-cachyos-kernel.url = "github:xddxdd/nix-cachyos-kernel";
     home-manager = {
       url = "github:nix-community/home-manager/";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -49,6 +50,7 @@
       noctalia,
       niri,
       disko,
+      nix-cachyos-kernel,
       ...
     }@inputs:
     {

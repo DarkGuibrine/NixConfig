@@ -29,7 +29,7 @@
   };
 
   gtk = {
-    enable = true;
+    enable = false;
     theme = {
       name = "Adwaita-dark";
       package = pkgs.gnome-themes-extra;
@@ -48,14 +48,14 @@
     };
   };
 
-  qt = {
-    enable = true;
-    style = {
-      name = "adwaita-dark";
-    };
-  };
+  #qt = {
+  #  enable = true;
+  #  style = {
+  #    name = "adwaita-dark";
+  #  };
+  #};
 
-  xdg.configFile."gtk-3.0/settings.ini".force = true;
-  xdg.configFile."gtk-4.0/settings.ini".force = true;
+  #xdg.configFile."gtk-3.0/settings.ini".force = true;
+  #xdg.configFile."gtk-4.0/settings.ini".force = true;
 
 }

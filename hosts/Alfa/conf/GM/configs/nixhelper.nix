@@ -28,6 +28,7 @@
     ## Cache
     ccache.enable = true;
     ccache.cacheDir = "/var/cache/ccache";
+
   };
 
   nix = {
@@ -51,8 +52,12 @@
       lib.filterAttrs (_: value: lib.isType "flake" value) inputs
     );
     settings.flake-registry = "";
+
+    settings.substituters = [ "https://attic.xuyh0120.win/lantian" ];
+    settings.trusted-public-keys = [ "lantian:EeAUQ+W+6r7EtwnmYjeVwx5kOGEBpjlBfPlzGlTNvHc=" ];
   };
 
+  nixpkgs.overlays = [ inputs.nix-cachyos-kernel.overlays.pinned ];
   services = {
     flatpak = {
       enable = true;
