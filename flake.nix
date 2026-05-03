@@ -83,6 +83,7 @@
           specialArgs = { inherit inputs; };
           modules = [
             ./hosts/darkgui-vps/configuration.nix
+            nyx-loner.nixosModules.default
           ];
         };
       };
