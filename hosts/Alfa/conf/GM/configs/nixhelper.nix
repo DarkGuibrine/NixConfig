@@ -63,9 +63,16 @@
     overlay.enable = true;
   };
 
+  services.printing.enable = false;
   services = {
     flatpak = {
       enable = true;
+    };
+  };
+
+  nixpkgs.config = {
+    problems.handlers = {
+      cups.broken = "warn";
     };
   };
 
