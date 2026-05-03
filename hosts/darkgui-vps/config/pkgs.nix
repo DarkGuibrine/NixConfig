@@ -20,9 +20,12 @@
     unrar
     unzip
 
+
+    zerotierone    
     ## Zed
     nixd
     nil
+    python3
   ];
 
 }

@@ -55,5 +55,13 @@
       "--advertise-exit-node"
     ];
   };
+  
+  services.zerotierone = {
+  enable = true;
+  joinNetworks = [
+  "08752e18b156e2f5"    
+  ];
+};
+
 
 }
