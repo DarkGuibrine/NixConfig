@@ -14,8 +14,9 @@
 
   ## Configuraçãao do bootloader
   boot = {
-    kernelPackages = pkgs.linuxPackages_latest;
-    #kernelPackages = pkgs.linux-cachyos-latest-lto-x86_64-v3;
+    #kernelPackages = pkgs.linuxPackages_latest;
+    kernelPackages = pkgs.linuxPackages_cachyos-lto;
+    #kernelPackages = inputs.nix-cachyos.legacyPackages.x86_64-linux.linuxPackages-cachyos-latest-lto-x86_64-v3;
     loader.systemd-boot.enable = true;
     loader.efi.canTouchEfiVariables = true;
     loader.systemd-boot.configurationLimit = 10;

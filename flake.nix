@@ -8,7 +8,8 @@
     preload-ng.url = "github:miguel-b-p/preload-ng";
     aagl.url = "github:ezKEa/aagl-gtk-on-nix";
     disko.url = "github:nix-community/disko";
-    nix-cachyos-kernel.url = "github:xddxdd/nix-cachyos-kernel";
+    #nix-cachyos.url = "github:xddxdd/nix-cachyos-kernel";
+    nyx-loner.url = "github:lonerOrz/nyx-loner";
     home-manager = {
       url = "github:nix-community/home-manager/";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -50,7 +51,7 @@
       noctalia,
       niri,
       disko,
-      nix-cachyos-kernel,
+      nyx-loner,
       ...
     }@inputs:
     {
@@ -63,10 +64,8 @@
             ./hosts/Alfa/configuration.nix
             ./mods/nixos/nixos.nix
             preload-ng.nixosModules.default
-            #niri.nixosModules.niri
-            #sops-nix.nixosModules.sops
             { services.preload-ng.enable = true; }
-            #chaotic.nixosModules.default
+            nyx-loner.nixosModules.default
             {
               imports = [ aagl.nixosModules.default ];
               nix.settings = aagl.nixConfig;
@@ -84,6 +83,7 @@
           specialArgs = { inherit inputs; };
           modules = [
             ./hosts/darkgui-vps/configuration.nix
+            nyx-loner.nixosModules.default
           ];
         };
       };

@@ -21,6 +21,11 @@
     };
   };
 
+  chaotic.nyx = {
+    cache.enable = true;
+    overlay.enable = true;
+  };
+
   nix.package = pkgs.lixPackageSets.stable.lix;
 
 }
