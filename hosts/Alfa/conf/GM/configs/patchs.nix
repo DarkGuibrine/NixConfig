@@ -57,8 +57,9 @@
              ATTR{vendor}=="0x10de", ATTR{class}=="0x03[0-9]*", \
              TEST=="power/control", ATTR{power/control}="on"
 
-             # enable udev xiaomi
-             SUBSYSTEM=="usb", ATTR{idVendor}=="2717", MODE="0666", GROUP="plugdev"
+            # atack shark
+             KERNEL=="hidraw*", ATTRS{idVendor}=="1d57", ATTRS{idProduct}=="fa60", MODE="0666", SYMLINK+="xenta-mouse-hidraw", TAG+="uaccess"
+             KERNEL=="hidraw*", ATTRS{idVendor}=="1d57", ATTRS{idProduct}=="fa55", MODE="0666", SYMLINK+="xenta-mouse-hidraw", TAG+="uaccess"
         	     '';
     };
 

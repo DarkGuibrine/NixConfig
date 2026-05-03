@@ -15,8 +15,8 @@
 
   imports = [
     ./thunar.nix
-    ./dms.nix
-    #./noctalia.nix
+    #./dms.nix
+    ./noctalia.nix
   ];
 
   services.dbus.enable = true;

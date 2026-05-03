@@ -53,11 +53,16 @@
     );
     settings.flake-registry = "";
 
-    settings.substituters = [ "https://attic.xuyh0120.win/lantian" ];
-    settings.trusted-public-keys = [ "lantian:EeAUQ+W+6r7EtwnmYjeVwx5kOGEBpjlBfPlzGlTNvHc=" ];
+    settings.substituters = [ "https://cache.garnix.io" ];
+    settings.trusted-public-keys = [ "cache.garnix.io:CTFPyKSLcx5RMJKfLo5EEPUObbA78b0YQ2DTCJXqr9g=" ];
   };
 
-  nixpkgs.overlays = [ inputs.nix-cachyos-kernel.overlays.pinned ];
+  # chaotic
+  chaotic.nyx = {
+    cache.enable = true;
+    overlay.enable = true;
+  };
+
   services = {
     flatpak = {
       enable = true;
