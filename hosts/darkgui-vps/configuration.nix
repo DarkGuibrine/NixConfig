@@ -49,7 +49,6 @@ in
     users.godot = {
       isNormalUser = true;
       extraGroups = [
-        "docker"
       ];
       openssh.authorizedKeys.keys = [
         "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIHd9zC2Hux0OW57hQ2djiisa2jyTrZOQcS2FLFkQohvI rangelsm2013@gmail.com"
