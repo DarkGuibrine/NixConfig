@@ -12,7 +12,6 @@
     git
     vim
     wget
-    screen
     fish
     btop
     fastfetch

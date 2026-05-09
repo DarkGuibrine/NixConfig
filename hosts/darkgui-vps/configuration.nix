@@ -17,10 +17,6 @@ in
   ];
 
   boot = {
-<<<<<<< HEAD
-    kernelPackages = pkgs.linux_cachyos-server;
-=======
->>>>>>> 8c424e69b85789b646939b1787e64e7cb8e5a341
     loader = {
       systemd-boot.enable = true;
       efi = {
