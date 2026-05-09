@@ -8,72 +8,64 @@
 {
   ## pacotes home-manager
   home.packages = with pkgs; [
-
-    ## aplicativos sociais
+    ## Comunicação / social
     telegram-desktop
     pear-desktop
     teams-for-linux
-    #(discord.override { withVencord = true; })
     (discord.override { withEquicord = true; })
     jellyfin-desktop
 
     ## Jogos
-    #lutris
     faugus-launcher
     heroic
     prismlauncher
-    steam
     adwsteamgtk
     ryubing
     xclicker
-    #mangojuice
     goverlay
     mangohud
     protonplus
     hydralauncher
     lsfg-vk
     lsfg-vk-ui
-    android-tools
+
+    ## Desenvolvimento
     zed-editor
+    vscodium
     nil
     nixd
-
-    ## Utilitários do sistema e dev tools
-    fastfetch
-    flameshot
-    #handbrake
-    easyeffects
-    qbittorrent
-    cpu-x
-    git
-    btop-cuda
-    vscodium
-    flatpak
-    wget
-    kitty
-    vlc
-    tree
-    python314
-    unrar
-    droidcam
-    motrix
-    mission-center
     nodejs
-    lxappearance
-    nwg-look
-    #rustdesk
-    anydesk
-    libargon2
-    openssl_oqs
-    icu
-    kdePackages.qt6ct
-    libsForQt5.qt5ct
-    pkgs.gnome-themes-extra
-    papirus-icon-theme
-
-    ## Dev
+    python3
     godot
 
-  ];
+    ## Terminal / CLI
+    kitty
+    fastfetch
+    btop-cuda
+    tree
+    wget
+    git
+    unrar
 
+    ## Multimídia
+    vlc
+    qbittorrent
+    easyeffects
+    flameshot
+    motrix
+
+    ## Sistema
+    cpu-x
+    mission-center
+    droidcam
+    anydesk
+
+    ## Temas / aparência
+    lxappearance
+    nwg-look
+    kdePackages.qt6ct
+    libsForQt5.qt5ct
+    gnome-themes-extra
+    papirus-icon-theme
+  ];
 }

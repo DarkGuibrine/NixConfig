@@ -6,23 +6,24 @@
   ...
 }:
 {
-
   environment.systemPackages = with pkgs; [
+    ## CLI
     curl
-    git
-    vim
     wget
     screen
     fish
     btop
     fastfetch
-    gitFull
-    unrar
     unzip
+    unrar
 
-    ## Zed
+    ## Git
+    gitFull
+
+    ## Editor
+    vim
+
+    ## Nix
     nixd
-    nil
   ];
-
 }
