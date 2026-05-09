@@ -11,58 +11,74 @@
   nixpkgs.config.allowUnfree = true;
 
   environment.systemPackages = with pkgs; [
-    ## Aplicativos sociais
+    ## Navegadores
+    librewolf
+    inputs.zen-browser.packages.${pkgs.system}.default
+
+    ## Streaming / mídia
+    inputs.shiru.packages.${pkgs.system}.default
+    inputs.hayase.packages.${pkgs.system}.default
+    linux-wallpaperengine
+
+    ## Segurança / rede
     bitwarden-desktop
-    sunshine
     tailscale
+    zerotierone
+    cloudflared
+    sunshine
 
-    ## inputs
-    inputs.zen-browser.packages.${stdenv.hostPlatform.system}.default
-    inputs.shiru.packages.${pkgs.stdenv.hostPlatform.system}.default
+    ## Remote desktop
+    freerdp
+    kdePackages.krdp
 
-    ## Utilitários do sistema e dev tools
+    ## Containers
+    docker-compose
+    distrobox
+    distroshelf
+
+    ## Desenvolvimento
+    gcc
+    gnumake
+    gitFull
     nh
     home-manager
+    lazygit
+
+    ## Vulkan / gráficos
     vulkan-tools
-    vulkan-loader
     vulkan-utility-libraries
-    gcc
-    ethtool
+
+    ## Wine
+    wine-staging
+    winetricks
+    winboat
+
+    ## Sistema
     efibootmgr
-    docker-compose
-    distroshelf
-    distrobox
-    freerdp
+    ethtool
     dmidecode
     i2c-tools
-    gitFull
-    kdePackages.partitionmanager
     usbutils
-    openrgb
-    winetricks
-    #wineWowPackages.staging
-    wine
-    haguichi
-    logmein-hamachi
-    zerotierone
+    xwayland-satellite
+    android-tools
+
+    ## KDE / utilitários
+    kdePackages.partitionmanager
     kdePackages.ark
     loupe
-    lazygit
-    gnumake
     onlyoffice-desktopeditors
+
+    ## Temas Qt
     adwaita-qt
     adwaita-qt6
-    winboat
-    xwayland-satellite
-    linux-wallpaperengine
-    #kdePackages.polkit-qt-1
-    kdePackages.krdp
-    cloudflared
 
-    ## inputs stable
-    #inputs.nixpkgs-stable.legacyPackages.${pkgs.stdenv.hostPlatform.system}
+    ## RGB
+    openrgb
+
+    ## Hamachi
+    haguichi
+    logmein-hamachi
   ];
-
   programs.gpu-screen-recorder.enable = true;
   services.logmein-hamachi.enable = true;
   programs.haguichi.enable = true;
