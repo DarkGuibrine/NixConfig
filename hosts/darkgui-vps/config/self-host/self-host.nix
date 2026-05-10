@@ -61,7 +61,7 @@
     settings = {
       server = {
         verbosity = 0;
-        interface = [ "127.0.0.1" ];
+        interface = [ "0.0.0.0" ];
         port = 5335;
 
         do-ip4 = "yes";
