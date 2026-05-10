@@ -16,9 +16,11 @@
     fastfetch
     unzip
     unrar
+    zerotierone
 
     ## Git
     gitFull
+    git
 
     ## Editor
     vim
