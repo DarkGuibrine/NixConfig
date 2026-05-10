@@ -18,7 +18,7 @@ in
   ];
 
   boot = {
-    kernelPackages = pkgs.linuxKernel.packages.linux_cachyos-lts;
+    kernelPackages = inputs.nix-cachyos-kernel.packages.${pkgs.system}.linux-cachyos-lts;
     loader = {
       systemd-boot.enable = true;
       efi = {
