@@ -61,8 +61,15 @@
     settings = {
       server = {
         verbosity = 0;
-        interface = [ "0.0.0.0" ];
+        interface = [ "0.0.0.0" "127.0.0.1" ];
         port = 5335;
+
+        access-control = [
+          "127.0.0.0/8 allow"
+          "10.0.0.0/8 allow"
+          "172.16.0.0/12 allow"
+          "192.168.0.0/16 allow"
+        ];
 
         do-ip4 = "yes";
         do-udp = "yes";

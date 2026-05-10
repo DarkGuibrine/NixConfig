@@ -13,18 +13,14 @@
     allowedTCPPorts = [
       80
       443
+      5335
+      7777
     ];
-    allowedUDPPortRanges = [
-      {
-        from = 47998;
-        to = 48000;
-      }
-      {
-        from = 48002;
-        to = 48010;
-      }
+    allowedTCPPorts = [
+      5335
+      7777
     ];
-    trustedInterfaces = [ "tailscale0" ];
+    trustedInterfaces = [ "tailscale0" "docker0" ];
     allowedUDPPorts = [ config.services.tailscale.port ];
   };
 
