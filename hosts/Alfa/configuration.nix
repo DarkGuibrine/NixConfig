@@ -10,6 +10,7 @@
     # Importa a configuração de hardware detectada
     ./hardware-configuration.nix
     ./conf/GM/imp.nix
+    inputs.nyx-loner.nixosModules.default
   ];
 
   ## Configuraçãao do bootloader

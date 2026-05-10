@@ -6,6 +6,7 @@
   ...
 }:
 {
+  imports = [ inputs.preload-ng.nixosModules.default ];
 
   ## Variaveis de ambiente contendo o aumento de cache para placas da nvidia
   environment.variables = {

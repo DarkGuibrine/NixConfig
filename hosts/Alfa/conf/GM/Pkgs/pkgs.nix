@@ -12,7 +12,6 @@
 
   environment.systemPackages = with pkgs; [
     ## Navegadores
-    librewolf
     inputs.zen-browser.packages.${pkgs.system}.default
 
     ## Streaming / mídia
@@ -82,6 +81,11 @@
   programs.gpu-screen-recorder.enable = true;
   services.logmein-hamachi.enable = true;
   programs.haguichi.enable = true;
+
+  imports = [ inputs.aagl.nixosModules.default ];
+  nix.settings = inputs.aagl.nixConfig;
+  programs.sleepy-launcher.enable = true;
+  programs.anime-game-launcher.enable = true;
 
   nixpkgs.config.permittedInsecurePackages = [
     "electron-38.8.4"

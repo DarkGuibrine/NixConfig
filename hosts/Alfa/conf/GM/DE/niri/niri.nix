@@ -6,7 +6,6 @@
   ...
 }:
 {
-
   nixpkgs.overlays = [ inputs.niri.overlays.niri ];
   programs.niri = {
     enable = true;
@@ -17,6 +16,7 @@
     ./thunar.nix
     #./dms.nix
     ./noctalia.nix
+    inputs.niri.nixosModules.niri
   ];
 
   services.dbus.enable = true;

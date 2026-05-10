@@ -22,7 +22,7 @@
     adwsteamgtk
     ryubing
     xclicker
-    goverlay
+    #goverlay
     mangohud
     protonplus
     hydralauncher
