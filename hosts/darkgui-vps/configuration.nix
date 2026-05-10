@@ -18,7 +18,6 @@ in
   ];
 
   boot = {
-    kernelPackages = inputs.nyx-loner.packages.${pkgs.system}.linux-cachyos-lts;
     loader = {
       systemd-boot.enable = true;
       efi = {
