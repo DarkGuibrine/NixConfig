@@ -28,5 +28,8 @@
     ## Dev
     nixd
     python3
+
+    ## Segurança
+    unbound
   ];
 }
