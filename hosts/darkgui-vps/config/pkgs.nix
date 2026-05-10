@@ -31,5 +31,6 @@
 
     ## Segurança
     unbound
+    dig
   ];
 }
