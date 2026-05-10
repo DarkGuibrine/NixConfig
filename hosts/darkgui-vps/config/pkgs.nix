@@ -25,7 +25,8 @@
     ## Editor
     vim
 
-    ## Nix
+    ## Dev
     nixd
+    python3
   ];
 }
