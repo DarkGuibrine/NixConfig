@@ -12,6 +12,7 @@ in
   imports = [
     ./hardware-configuration.nix
     inputs.disko.nixosModules.disko
+    inputs.nyx-loner.nixosModules.default
     ./disk-config.nix
     ./config/imp.nix
   ];
