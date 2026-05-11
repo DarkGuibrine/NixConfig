@@ -68,4 +68,8 @@
     gnome-themes-extra
     papirus-icon-theme
   ];
+
+  imports = [
+    ./firefox.nix
+  ];
 }
