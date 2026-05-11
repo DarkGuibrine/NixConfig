@@ -41,20 +41,13 @@
       DontCheckDefaultBrowser = true;
       HardwareAcceleration = false;
       OfferToSaveLogins = false;
-      DefaultDownloadDirectory = "${home}/Downloads";
-
     };
 
-    # Extensions
-    extensions = with config.nur.repos.rycee.firefox-addons; [
-      ublock-origin
-      bitwarden
-      dark-reader
-      bing-automator
-
-    ];
+    configPath = "${config.xdg.configHome}/mozilla/firefox";
 
     profiles.default = {
+
+      # Extensions
 
       search = {
         force = true;

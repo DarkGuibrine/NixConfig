@@ -70,6 +70,7 @@
   ];
 
   imports = [
-    ./firefox.nix
+    #./firefox.nix
+    inputs.nur.modules.homeManager.default
   ];
 }
