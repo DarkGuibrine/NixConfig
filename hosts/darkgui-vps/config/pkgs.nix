@@ -17,6 +17,7 @@
     unzip
     unrar
     zerotierone
+    ookla-speedtest
 
     ## Git
     gitFull

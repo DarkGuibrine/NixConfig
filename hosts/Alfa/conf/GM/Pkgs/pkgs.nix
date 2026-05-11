@@ -25,6 +25,7 @@
     zerotierone
     cloudflared
     sunshine
+    ookla-speedtest
 
     ## Remote desktop
     freerdp
