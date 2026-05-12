@@ -83,7 +83,10 @@
   services.logmein-hamachi.enable = true;
   programs.haguichi.enable = true;
 
-  imports = [ inputs.aagl.nixosModules.default ];
+  imports = [
+    inputs.aagl.nixosModules.default
+    inputs.nur.modules.nixos.default
+  ];
   nix.settings = inputs.aagl.nixConfig;
   programs.sleepy-launcher.enable = true;
   programs.anime-game-launcher.enable = true;

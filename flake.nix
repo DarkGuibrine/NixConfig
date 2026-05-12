@@ -17,6 +17,7 @@
     noctalia.url = "github:noctalia-dev/noctalia-shell";
     niri.url = "github:sodiboo/niri-flake";
     quickshell.url = "git+https://git.outfoxxed.me/outfoxxed/quickshell";
+    nur.url = "github:nix-community/NUR";
   };
   outputs =
     inputs@{
