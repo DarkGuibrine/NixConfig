@@ -31,7 +31,6 @@
     python3
 
     ## Segurança
-    unbound
     dig
   ];
 }
