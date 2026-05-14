@@ -32,6 +32,7 @@ in
 
   networking.hostName = vars.hostname;
   networking.networkmanager.enable = true;
+  networking.enableIPv6 = true;
 
   time.timeZone = vars.timezone;
   i18n.defaultLocale = vars.locale;

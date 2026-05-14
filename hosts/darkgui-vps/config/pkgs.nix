@@ -18,6 +18,9 @@
     unrar
     zerotierone
     ookla-speedtest
+    just
+    cargo
+    gcc
 
     ## Git
     gitFull
