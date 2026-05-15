@@ -22,6 +22,7 @@
     ## Segurança / rede
     bitwarden-desktop
     tailscale
+    netbird
     zerotierone
     cloudflared
     sunshine

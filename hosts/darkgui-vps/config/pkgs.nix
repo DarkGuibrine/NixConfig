@@ -21,6 +21,7 @@
     just
     cargo
     gcc
+    netbird
 
     ## Git
     gitFull

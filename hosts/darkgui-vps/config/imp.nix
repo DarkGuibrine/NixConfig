@@ -12,5 +12,5 @@
     ./nix-helper.nix
     ./self-host/self-host.nix
     ./self-host/firewall.nix
-  ];
+    ];
 }
