@@ -2,6 +2,7 @@
 {
   imports = [
     ./netbird/netbird.nix
+    ./tailscale/tailscale.nix
   ];
 
   options.mods = {

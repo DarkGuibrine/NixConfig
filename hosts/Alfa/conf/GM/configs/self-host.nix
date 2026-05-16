@@ -7,15 +7,13 @@
 }:
 {
 
-  ## tailscale
-  services.tailscale = {
-    enable = true;
-    extraUpFlags = [
-      "--exit-node-allow-lan-access=true"
-      "--ssh"
-      "--accept-dns=true"
-    ];
+  mods = {
+    netbird.enable = true;
+    tailscale.enable = true;
+    flakePath = "/etc/nixos";
   };
+
+
   networking.nftables.enable = true;
   networking.firewall = {
     enable = true;

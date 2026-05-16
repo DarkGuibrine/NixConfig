@@ -9,6 +9,7 @@
 
   mods = {
     netbird.enable = true;
+    tailscale.enable = true;
     flakePath = "/etc/nixos";
   };
 
