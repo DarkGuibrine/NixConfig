@@ -1,7 +1,7 @@
 { lib, ... }:
 {
   imports = [
-
+    ./nixos/netbird/netbird.nix
   ];
 
   options.mods = {

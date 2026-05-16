@@ -15,8 +15,10 @@
       81
       443
       3000
+      3478
       5335
       7777
+      8443
       9000
       11000
     ];
@@ -25,8 +27,10 @@
     allowedUDPPorts = [
       config.services.tailscale.port
       53
+      3478
       5300
       7777
+      8443
       40000
     ];
     extraCommands = ''

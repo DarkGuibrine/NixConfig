@@ -44,6 +44,7 @@
             specialArgs = { inherit inputs; };
             modules = [
               ./hosts/darkgui-vps/configuration.nix
+              ./mods/nixos/nixos.nix
             ];
           };
         };

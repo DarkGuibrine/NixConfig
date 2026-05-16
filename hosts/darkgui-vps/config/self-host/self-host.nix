@@ -7,6 +7,11 @@
 }:
 {
 
+  mods = {
+    netbird.enable = true;
+    flakePath = "/etc/nixos";
+  };
+
   # Enable the OpenSSH daemon.
   services.openssh = {
     enable = true;

@@ -22,6 +22,8 @@
     cargo
     gcc
     netbird
+    openssl
+    jq
 
     ## Git
     gitFull
